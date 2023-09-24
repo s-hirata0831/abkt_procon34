@@ -12,6 +12,28 @@ export const First = () => {
     
     return (
         <>
+            {/*SideBar*/}
+            <div className='side-bar'>
+                <div className='theme'>
+                    <p>テーマ</p>
+                    <p>秋の新商品を決める</p>
+                </div>
+                <div className='time'>
+                    <p>制限時間</p>
+                    <p>残り2分35秒</p>
+                </div>
+                <button>魔法を全て唱えたよ！</button><br/>
+                <button>助けて！！！！！！！</button>
+                <div className='member'>
+                    <p>メンバー</p>
+                    <ul>
+                        <li>舞鶴太郎</li>
+                        <li>高専花子</li>
+                        <li>舞鶴蟹子</li>
+                    </ul>
+                </div>
+            </div>
+
             {/*TitleArea*/}
             <div className="title-area">
                 <p className='title'>アイデアを記入しましょう</p>
@@ -28,7 +50,14 @@ export const First = () => {
             <div className='idea-area'>
                 <p className="title">思いついたアイデア</p>
                 <ul>
-                    <div className='idea-list'></div>
+                    <div className='idea-list'>
+                        <li>サツマイモ</li>
+                        <button>削除</button>
+                    </div>
+                <div className='idea-list'>
+                        <li>松茸</li>
+                        <button>削除</button>
+                    </div>
                 </ul>
             </div>
 
