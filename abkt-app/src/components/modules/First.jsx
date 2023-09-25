@@ -1,15 +1,49 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { useTimer } from "react-timer-hook";
+
+function MyTimer({ expiryTimestamp }) {
+    const {
+        seconds,
+        minutes,
+        hours,
+        days,
+        isRunnning,
+        start,
+        pause,
+        resume,
+        restart,
+    } = useTimer({
+        expiryTimestamp,
+        onExpire: () => console.warn("onExpire called")});
+
+    return (
+        <div className='time'>
+            <span>{days}</span>日<span>{hours}</span>時間<span>{minutes}</span>分<span>{seconds}秒</span>
+            <button onClick={start}>Start</button>
+            <button onClick={pause}>Pause</button>
+            <button 
+                onClick={() => {
+                    const time = new Date();
+                    time.setSeconds(time.getSeconds() + 300);
+                    restart(time);
+                }}
+            >Restart</button>
+        </div>
+    );
+}
 
 export const First = () => {
     const [inputText, setInputText] = useState('');
     const onChangeText = (event) => setInputText(event.target.value);
+    const time = new Date();
+    time.setSeconds(time.getSeconds() + 600);//10分タイマー
 
     const onClickAdd = () => {
-        if(inputText === "") return;
-        
+        if (inputText === "") return;
+
 
     };
-    
+
     return (
         <>
             {/*SideBar*/}
@@ -21,8 +55,9 @@ export const First = () => {
                 <div className='time'>
                     <p>制限時間</p>
                     <p>残り2分35秒</p>
+                    <MyTimer expiryTimestamp={time} />
                 </div>
-                <button>魔法を全て唱えたよ！</button><br/>
+                <button>魔法を全て唱えたよ！</button><br />
                 <button>助けて！！！！！！！</button>
                 <div className='member'>
                     <p>メンバー</p>
@@ -54,7 +89,7 @@ export const First = () => {
                         <li>サツマイモ</li>
                         <button>削除</button>
                     </div>
-                <div className='idea-list'>
+                    <div className='idea-list'>
                         <li>松茸</li>
                         <button>削除</button>
                     </div>
