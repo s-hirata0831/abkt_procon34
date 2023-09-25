@@ -54,7 +54,6 @@ export const First = () => {
                 </div>
                 <div className='time'>
                     <p>制限時間</p>
-                    <p>残り2分35秒</p>
                     <MyTimer expiryTimestamp={time} />
                 </div>
                 <button>魔法を全て唱えたよ！</button><br />

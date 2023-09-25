@@ -6,7 +6,6 @@ import { First } from '../modules/First';
 export const FirstPhase = () =>{
     return (
         <>
-            <Header />
             <First />
         </>
     );
