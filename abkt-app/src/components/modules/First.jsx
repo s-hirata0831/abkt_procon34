@@ -95,7 +95,6 @@ export const First = () => {
                     </div>
                 </ul>
             </div>
-
         </>
     );
 }; 

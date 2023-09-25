@@ -1,17 +1,21 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Header from './components/modules/Header';
 import { First } from './components/modules/First';
+import { FirstPhase } from './components/pages/FirstPhase';
 
 export const App = () => {
   return (
-    <>
-    <Header />
-    <First />
-    <p>Hello Abkt!</p>
-    <Button>日本人</Button>
-    <Button variant="contained">contained</Button>
-    <Button variant="outlined">outlined</Button>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<FirstPhase />} />
+        <Route path="/First" element={<First />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
+/*<Button variant="outlined">
+          <Link to="/FirstPhase">第1フェーズ</Link>
+        </Button>*/
