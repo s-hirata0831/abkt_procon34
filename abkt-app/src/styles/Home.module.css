@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+
+.home_header{
+    position: relative;
+    text-align: center;
+
+}
+
+.home_header img{
+    border-radius: 8px;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.icon{
+    max-width: 35%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.icon:hover{
+    background: rgba(255,255,255,0.3);
+}
+
+.text{
+    text-align: center;
+}
+
+.title{
+    position: absolute;
+    color: #f0e68c;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-family: 'Aoboshi One', serif;
+}

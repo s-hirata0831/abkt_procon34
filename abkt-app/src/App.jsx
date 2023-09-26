@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Header from './components/modules/Header';
-import { First } from './components/modules/First';
+import { HomePage } from './components/pages/HomePage';
 import { FirstPhase } from './components/pages/FirstPhase';
 
 export const App = () => {
@@ -10,8 +10,8 @@ export const App = () => {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<FirstPhase />} />
-        <Route path="/First" element={<First />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/FirstPhase" element={<FirstPhase />} />
       </Routes>
     </BrowserRouter>
   );

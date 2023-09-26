@@ -4,10 +4,6 @@ button:hover{
     cursor: pointer;
 }
 
-.header_font{
-    font-family: 'Potta One', cursive;
-}
-
 .title{
     text-align: left;
     margin-top: 0;
