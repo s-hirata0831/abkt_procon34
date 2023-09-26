@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from "../../styles/First.module.css";
 import { useTimer } from "react-timer-hook";
 
 function MyTimer({ expiryTimestamp }) {
@@ -47,18 +48,18 @@ export const First = () => {
     return (
         <>
             {/*SideBar*/}
-            <div className='side-bar'>
-                <div className='theme'>
+            <div className={styles.side_bar}>
+                <div className={styles.theme}>
                     <p>テーマ</p>
                     <p>秋の新商品を決める</p>
                 </div>
-                <div className='time'>
+                <div className={styles.time}>
                     <p>制限時間</p>
                     <MyTimer expiryTimestamp={time} />
                 </div>
                 <button>魔法を全て唱えたよ！</button><br />
                 <button>助けて！！！！！！！</button>
-                <div className='member'>
+                <div className={styles.member}>
                     <p>メンバー</p>
                     <ul>
                         <li>舞鶴太郎</li>
@@ -69,26 +70,26 @@ export const First = () => {
             </div>
 
             {/*TitleArea*/}
-            <div className="title-area">
-                <p className='title'>アイデアを記入しましょう</p>
-                <p>例：さつまいも，月見</p>
+            <div className={styles.title_area}>
+                <p className={styles.title}>アイデアを記入しましょう</p>
+                <p className={styles.title_string}>例：さつまいも，月見</p>
             </div>
 
             {/*InputArea*/}
-            <div className="input-area">
+            <div className={styles.input_area}>
                 <input placeholder='アイデアを入力' onChangeText />
                 <button>追加</button>
             </div>
 
             {/*IdeaList*/}
-            <div className='idea-area'>
-                <p className="title">思いついたアイデア</p>
+            <div className={styles.idea_area}>
+                <p className={styles.title}>思いついたアイデア</p>
                 <ul>
-                    <div className='idea-list'>
+                    <div className={styles.idea_list}>
                         <li>サツマイモ</li>
                         <button>削除</button>
                     </div>
-                    <div className='idea-list'>
+                    <div className={styles.idea_list}>
                         <li>松茸</li>
                         <button>削除</button>
                     </div>
