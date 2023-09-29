@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+button:hover{
+    cursor: pointer;
+}
+
+.title{
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #666;
+    font-size: 25px;
+    font-family: 'Potta One', cursive;
+}
+
+.title_area{
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.title_string{
+    margin-top: 0;
+    margin-left: 0;
+}
