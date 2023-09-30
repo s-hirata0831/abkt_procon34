@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import styles from "../../styles/First.module.css";
+import styles from "../../styles/FirstBar.module.css";
+import CssBaseline from '@mui/material/CssBaseline';
 import { useTimer } from "react-timer-hook";
 
 function MyTimer({ expiryTimestamp }) {
@@ -40,6 +41,7 @@ export const FirstBar = () => {
 
     return (
         <>
+            <CssBaseline />
             <div className={styles.side_bar}>
                 <div className={styles.theme}>
                     <p>テーマ</p>

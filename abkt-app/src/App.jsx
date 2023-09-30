@@ -5,6 +5,7 @@ import Header from './components/modules/Header';
 import { HomePage } from './components/pages/HomePage';
 import { FirstPhase } from './components/pages/FirstPhase';
 import { FirstBar } from "./components/modules/FirstBar";
+import { NotFound } from "./components/pages/NotFound";
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/FirstPhase" element={<FirstPhase />} />
         <Route path="/FirstBar" element={<FirstBar />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
   );
