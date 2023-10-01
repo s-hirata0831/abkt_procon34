@@ -12,7 +12,7 @@ export const Home = () => {
                 </Link>
                 <p className={styles.title}>アブラカタブレイン</p>
             </div>
-            <p className={styles.text}>上記画像のアイコンをクリックすると，テストプレイを始められます。</p>
+            <p className={styles.text}>上記画像のアイコンをクリックするとプレイを始められます。</p>
         </>
     );
 }

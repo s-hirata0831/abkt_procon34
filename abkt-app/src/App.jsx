@@ -1,10 +1,12 @@
 import React from "react";
+import './styles/styles.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Header from './components/modules/Header';
 import { HomePage } from './components/pages/HomePage';
 import { FirstPhase } from './components/pages/FirstPhase';
-import { FirstBar } from "./components/modules/FirstBar";
+import { FirstSide } from "./components/modules/FirstSide";
+import { NotFound } from "./components/pages/NotFound";
 
 export const App = () => {
   return (
@@ -13,7 +15,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/FirstPhase" element={<FirstPhase />} />
-        <Route path="/FirstBar" element={<FirstBar />} />
+        <Route path="/FirstSide" element={<FirstSide />} />
+        <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
   );

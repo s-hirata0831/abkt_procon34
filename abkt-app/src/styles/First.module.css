@@ -1,7 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap');
+
+button{
+    background-color: #7882b0;
+    color: white;
+}
 
 button:hover{
     cursor: pointer;
+}
+
+.whole{
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+    background-color: #fdf5de;
+}
+
+.idea_area{
+    padding: 8px;
+    margin: 8px;
+}
+
+.idea_list{
+    display: flex;
+    flex-box: culumn;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.idea_list button{
+    margin-left: 1rem;
+}
+
+.input_area{
+    padding-left: 8px;
+    margin-left: 8px;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    flex-flow: culumn;
+    align-items: center;
+}
+
+.input_button{
+    padding-left: 8px;
 }
 
 .title{
@@ -11,16 +55,20 @@ button:hover{
     font-weight: bold;
     color: #666;
     font-size: 25px;
-    font-family: 'Potta One', cursive;
+    font-family: 'Yusei Magic', sans-serif;
 }
 
 .title_area{
     border-radius: 8px;
     padding: 8px;
     margin: 8px;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .title_string{
     margin-top: 0;
     margin-left: 0;
+    margin-bottom: 2px;
+    font-family: 'BIZ UDPGothic', sans-serif;
 }
