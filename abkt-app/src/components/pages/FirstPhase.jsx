@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import { First } from '../modules/First';
 import { FirstSide } from '../modules/FirstSide';
-import bgImage from "../../images/brain_first.png";
 
 export const FirstPhase = () => {
     return (
