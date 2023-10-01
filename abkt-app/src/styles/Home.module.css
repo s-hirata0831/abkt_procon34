@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
 
+.span{
+    display:block;
+    text-align:right;
+}
+/*home_header*/
 .home_header{
     position: relative;
     text-align: center;
-
+    font-size:36px;
 }
 
 .home_header img{
     border-radius: 8px;
-    width: 90%;
+    width: 100%;
     margin-top: 10px;
 }
 
@@ -16,8 +21,8 @@
     max-width: 35%;
     position: absolute;
     top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left:50%;
+    transform: translate(-135%, -60%);
     margin: 0;
     padding: 0;
 }
@@ -27,15 +32,111 @@
 }
 
 .text{
-    text-align: center;
+    font-size:3vw;
+    transform:translate(2% , -700%);
 }
 
 .title{
     position: absolute;
     color: #f0e68c;
     top: 70%;
+    max-width:50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
+    transform: translate(-127%, -60%);
+    font-size: 4vw;
     font-family: 'Aoboshi One', serif;
+}
+
+.hold{
+    position:absolute;
+    width:40%;
+    height:10%;
+    background-color:#CCC;
+    top: 25%;
+    right:5%;
+    font-size:5vw;
+    padding: 2% 0;
+}
+
+.hold:hover{
+    background-color:blue;
+}
+
+.hold:active{
+    background-color:red;/*クリック時とホバー時のカラーは随時変更*/
+}
+
+.join{
+    position:absolute;
+    width:40%;
+    height:10%;
+    background-color:#CCC;
+    top:55%;
+    right:5%;
+    font-size:5vW;
+    padding: 2% 0;
+}
+
+.join:hover{
+    background-color:blue;
+}
+
+.join:active{
+    background-color:red;
+}
+
+/*What's アブラカタブレイン*/
+.what{
+    display:flex;
+    align-items:stretch;
+}
+
+.what span{
+    color:red;
+}
+
+.what_abkt{
+    display:block;
+    font-size:8vw;
+    width:150%;
+    margin:20px;
+}
+
+.what_abkt_order{
+    flex-direction:column;
+}
+
+.explain{
+    width:80%;
+    flex-direction:column;
+    font-size :3vw;
+    margin:20px;
+}
+
+.explain_order{
+    flex-direction:column;
+}
+
+.detail{
+    transform:translate(280% , 0);
+    text-align:center;
+    width:25%;
+    height:15%;
+    font-size:3vw;
+    background-color:#CCC;
+    margin:50px 0 0 0;
+}
+
+.detail:hover{
+    background-color:blue;
+}
+
+.detail:active{
+    background-color:red;
+}
+
+.book{
+    width:30%;
+    height:30%;
+    transform:translate(20% , -50%);
 }
