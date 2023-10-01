@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import db from "../../firebase.config";
 
 export const Initialize= () => {
@@ -12,10 +12,17 @@ export const Initialize= () => {
         }
     };
 
+    const [placeText, setPlaceText] = useState('');
+    const onClickAdd = () => {
+        if (placeText === "") return;
+        const newTeam = [...{addBrain}, placeText];
+        addBrain(newTeam);
+    }
+
     return (
         <>
-            <input value={addBrain.teamName} />
-            <button>生成</button>
+            <input value={placeText} />
+            <button onClick={onClickAdd}>生成</button>
         </>
     );
 };
