@@ -1,0 +1,11 @@
+img{
+    width: 200px;
+}
+
+
+.icon_around{
+    max-width: 30%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}

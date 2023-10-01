@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+.side_bar{
+    margin-top: 5px;
+}
+
+.theme{
+    padding-left: 1rem;
+}
+
+.time{
+    padding-left: 1rem;
+}
+
+.title{
+    font-align: left;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.member{
+    padding-left: 1rem;
+}
