@@ -16,7 +16,7 @@ jobs:
         working-directory: abkt-app
       - run: |
           npm run build
-        workingdirectory:abkt-app
+        workingdirectory: abkt-app
         env:
          CI: false 
 
