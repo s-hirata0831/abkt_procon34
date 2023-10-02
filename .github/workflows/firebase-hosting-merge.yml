@@ -26,3 +26,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ABKT_PROCON34 }}'
           channelId: live
           projectId: abkt-procon34
+          entryPoint: "firebase"
