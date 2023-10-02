@@ -20,9 +20,7 @@ jobs:
         env:
          CI: false 
 
-      - uses: |
-          ../abkt-app
-          FirebaseExtended/action-hosting-deploy@v0
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ABKT_PROCON34 }}'
