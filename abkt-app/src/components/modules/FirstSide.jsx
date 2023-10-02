@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import FSModule from "../../styles/FirstSide.module.css";
+import Button from "@mui/material/Button";
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useTimer } from "react-timer-hook";
 
@@ -47,7 +50,7 @@ export const FirstSide = () => {
         <>
             <CssBaseline />
             <div className={FSModule.side_bar}>
-                <Card position="static" style={{backgroundColor: "#FDF5DE"}}>
+                <Card position="static" style={{ backgroundColor: "#FDF5DE" }}>
                     <List component="nav">
                         <div className={FSModule.theme}>
                             <p className={FSModule.title}>テーマ</p>
@@ -58,8 +61,15 @@ export const FirstSide = () => {
                             <p className={FSModule.title}>制限時間</p>
                             <MyTimer expiryTimestamp={time} />
                         </div>
-                        <button>魔法を全て唱えたよ！</button><br />
-                        <button>助けて！！！！！！！</button>
+                        <div className={FSModule.button_area}>
+                            <Button variant="contained" endIcon={<AutoFixHighIcon />} size="small">
+                                すべて唱えた！
+                            </Button>
+                            <br />
+                            <Button variant="contained" endIcon={<PsychologyAltIcon />} size="small">
+                                助けて！！！
+                            </Button>
+                        </div>
                         <Divider />
                         <div className={FSModule.member}>
                             <p className={FSModule.title}>メンバー</p>

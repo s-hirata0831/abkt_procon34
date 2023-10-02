@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
+.button_area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .side_bar{
     margin-top: 5px;
 }
@@ -10,10 +16,11 @@
 
 .time{
     padding-left: 1rem;
+    margin-bottom: 2px;
 }
 
 .title{
-    font-align: left;
+    text-align: left;
     margin-top: 1rem;
     margin-bottom: 0;
     font-weight: bold;
