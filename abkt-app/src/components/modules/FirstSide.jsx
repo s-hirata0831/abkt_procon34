@@ -54,12 +54,14 @@ export const FirstSide = () => {
                             </div>
                         </div>
                         <div className={FSModule.button_area}>
-                            <Button variant="contained" endIcon={<AutoFixHighIcon />} size="small" className={FSModule.magic_button}>
+                            <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{backgroundColor:"#7882b0"}} size="small" className={FSModule.magic_button}>
                                 すべて唱えた！
                             </Button>
-                            <Button variant="contained" endIcon={<PsychologyAltIcon />} size="small" className={FSModule.magic_button}>
+                            <br />
+                            <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{backgroundColor:"#7882b0"}} size="small" className={FSModule.magic_button}>
                                 助けて！！！
                             </Button>
+                            <br />
                         </div>
                         <Divider />
                         <div className={FSModule.member}>
