@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
 button{
     background-color: #7882b0;
@@ -25,9 +26,10 @@ button:hover{
 
 .idea_list{
     display: flex;
-    flex-box: culumn;
-    align-items: center;
-    margin-bottom: 1rem;
+    flex-direction: row;
+    align-items: left;
+    margin-bottom: 8px;
+    font-family: 'Kiwi Maru', serif;
 }
 
 .idea_list button{
@@ -70,5 +72,5 @@ button:hover{
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 2px;
-    font-family: 'BIZ UDPGothic', sans-serif;
+    font-family: 'Kiwi Maru', serif;
 }

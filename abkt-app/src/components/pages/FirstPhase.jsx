@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import { First } from '../modules/First';
 import { FirstSide } from '../modules/FirstSide';
-import bgImage from "../../images/brain_first.png";
 
 export const FirstPhase = () => {
     return (
@@ -20,7 +19,7 @@ export const FirstPhase = () => {
                         <FirstSide />
                     </Grid>
                     <Grid item xs={8} className={FPModule.icon_around}>
-                        <img src="img/brain_first.png" className="{styles.icon" />
+                        <img src='../img/brainFirst.png' className="{styles.icon}" />
                     </Grid>
                 </Grid>
             </div>

@@ -1,65 +1,66 @@
 import React, { useState } from 'react';
 import FSModule from "../../styles/FirstSide.module.css";
+import Button from "@mui/material/Button";
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+//import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
+import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import CssBaseline from '@mui/material/CssBaseline';
-import { useTimer } from "react-timer-hook";
+import { useStopwatch } from "react-timer-hook";
 
-function MyTimer({ expiryTimestamp }) {
+function Timer({ expiryTimestamp }) {
     const {
         seconds,
         minutes,
         hours,
-        days,
-        isRunnning,
+        isRunning,
         start,
         pause,
-        resume,
         restart,
-    } = useTimer({
-        expiryTimestamp,
-        onExpire: () => console.warn("onExpire called")
-    });
+    } = useStopwatch({autoStart: true});
 
     return (
         <div className='time'>
-            <span>{days}</span>日<span>{hours}</span>時間<span>{minutes}</span>分<span>{seconds}秒</span>
-            <button onClick={start}>Start</button>
-            <button onClick={pause}>Pause</button>
-            <button
-                onClick={() => {
-                    const time = new Date();
-                    time.setSeconds(time.getSeconds() + 300);
-                    restart(time);
-                }}
-            >Restart</button>
+            <span>{hours}</span>時間<span>{minutes}</span>分<span>{seconds}秒</span>
         </div>
     );
 }
 
 export const FirstSide = () => {
     const time = new Date();
-    time.setSeconds(time.getSeconds() + 600);//10分タイマー
+    time.setSeconds(time.getSeconds());//10分タイマー
 
     return (
         <>
             <CssBaseline />
             <div className={FSModule.side_bar}>
-                <Card position="static" style={{backgroundColor: "#FDF5DE"}}>
+                <Card position="static" style={{ backgroundColor: "#FDF5DE" }}>
                     <List component="nav">
+                        <div className={FSModule.icon_around}>
+                            <img src='../img/brainFirst.png' className="{FSModule.icon_around}" />
+                        </div>
+                        <Divider />
                         <div className={FSModule.theme}>
                             <p className={FSModule.title}>テーマ</p>
                             <p className={FSModule.themename}>秋の新商品を決める</p>
                         </div>
                         <Divider />
                         <div className={FSModule.time}>
-                            <p className={FSModule.title}>制限時間</p>
-                            <MyTimer expiryTimestamp={time} />
+                            <p className={FSModule.title}>経過時間</p>
+                            <div className={FSModule.time_body}>
+                                <Timer expiryTimestamp={time} />
+                            </div>
                         </div>
-                        <button>魔法を全て唱えたよ！</button><br />
-                        <button>助けて！！！！！！！</button>
+                        <div className={FSModule.button_area}>
+                            <Button variant="contained" endIcon={<AutoFixHighIcon />} size="small" className={FSModule.magic_button}>
+                                すべて唱えた！
+                            </Button>
+                            <Button variant="contained" endIcon={<PsychologyAltIcon />} size="small" className={FSModule.magic_button}>
+                                助けて！！！
+                            </Button>
+                        </div>
                         <Divider />
                         <div className={FSModule.member}>
                             <p className={FSModule.title}>メンバー</p>
