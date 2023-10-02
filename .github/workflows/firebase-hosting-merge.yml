@@ -11,9 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: cd abkt-app
-      - run: npm install
-      - run: npm run build
+      - run: |
+          npm ci
+        working-directory: abkt-app
+      - run: |
+          npm run build
+        workingdirectory: abkt-app
         env:
          CI: false 
 
