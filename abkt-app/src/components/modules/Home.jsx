@@ -30,7 +30,7 @@ export const Home = () => {
             </div>
             
                 <p className={styles.detail}>詳細はこちら</p>
-                <img className={styles.book} src='./img/ブレイン_魔術書『アブラカタブレイン』.png'/>
+                <img className={styles.book} src='./img/home_book.png'/>
             
             <div>
                 <p className={styles.text}>大魔導書アブラカタブレイン</p>
