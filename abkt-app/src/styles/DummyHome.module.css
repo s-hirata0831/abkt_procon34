@@ -22,8 +22,8 @@
 }
 
 .dummy_button{
-    border-radius: 8px !important;
-    font-family: 'Kiwi Maru', serif !important;
-    font-size: 25px !important;
-    margin-bottom: 1rem !important;
+    border-radius: 8px;
+    font-family: 'Kiwi Maru', serif;
+    font-size: 25px;
+    margin-bottom: 1rem;
 }

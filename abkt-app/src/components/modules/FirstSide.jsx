@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FSModule from "../../styles/FirstSide.module.css";
+import { StyledEngineProvider } from "@mui/material";
 import Button from "@mui/material/Button";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Card from '@mui/material/Card';
@@ -19,7 +20,7 @@ function Timer({ expiryTimestamp }) {
         start,
         pause,
         restart,
-    } = useStopwatch({autoStart: true});
+    } = useStopwatch({ autoStart: true });
 
     return (
         <div className='time'>
@@ -34,45 +35,47 @@ export const FirstSide = () => {
 
     return (
         <>
-            <CssBaseline />
-            <div className={FSModule.side_bar}>
-                <Card position="static" style={{ backgroundColor: "#FDF5DE" }}>
-                    <List component="nav">
-                        <div className={FSModule.icon_around}>
-                            <img src='../img/brainFirst.png' className="{FSModule.icon_around}" />
-                        </div>
-                        <Divider />
-                        <div className={FSModule.theme}>
-                            <p className={FSModule.title}>テーマ</p>
-                            <p className={FSModule.themename}>秋の新商品を決める</p>
-                        </div>
-                        <Divider />
-                        <div className={FSModule.time}>
-                            <p className={FSModule.title}>経過時間</p>
-                            <div className={FSModule.time_body}>
-                                <Timer expiryTimestamp={time} />
+            <StyledEngineProvider injectFirst>
+                <CssBaseline />
+                <div className={FSModule.side_bar}>
+                    <Card position="static" style={{ backgroundColor: "#FDF5DE" }}>
+                        <List component="nav">
+                            <div className={FSModule.icon_around}>
+                                <img src='../img/brainFirst.png' className="{FSModule.icon_around}" />
                             </div>
-                        </div>
-                        <div className={FSModule.button_area}>
-                            <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{backgroundColor:"#7882b0"}} size="small" className={FSModule.magic_button}>
-                                すべて唱えた！
-                            </Button>
-                            <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{backgroundColor:"#7882b0"}} size="small" className={FSModule.magic_button}>
-                                助けて！！！
-                            </Button>
-                        </div>
-                        <Divider />
-                        <div className={FSModule.member}>
-                            <p className={FSModule.title}>メンバー</p>
-                            <ul>
-                                <li>舞鶴太郎</li>
-                                <li>高専花子</li>
-                                <li>舞鶴蟹子</li>
-                            </ul>
-                        </div>
-                    </List>
-                </Card>
-            </div>
+                            <Divider />
+                            <div className={FSModule.theme}>
+                                <p className={FSModule.title}>テーマ</p>
+                                <p className={FSModule.themename}>秋の新商品を決める</p>
+                            </div>
+                            <Divider />
+                            <div className={FSModule.time}>
+                                <p className={FSModule.title}>経過時間</p>
+                                <div className={FSModule.time_body}>
+                                    <Timer expiryTimestamp={time} />
+                                </div>
+                            </div>
+                            <div className={FSModule.button_area}>
+                                <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
+                                    すべて唱えた！
+                                </Button>
+                                <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
+                                    助けて！！！
+                                </Button>
+                            </div>
+                            <Divider />
+                            <div className={FSModule.member}>
+                                <p className={FSModule.title}>メンバー</p>
+                                <ul>
+                                    <li>舞鶴太郎</li>
+                                    <li>高専花子</li>
+                                    <li>舞鶴蟹子</li>
+                                </ul>
+                            </div>
+                        </List>
+                    </Card>
+                </div>
+            </StyledEngineProvider>
         </>
     );
 };
