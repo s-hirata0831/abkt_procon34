@@ -57,11 +57,9 @@ export const FirstSide = () => {
                             <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{backgroundColor:"#7882b0"}} size="small" className={FSModule.magic_button}>
                                 すべて唱えた！
                             </Button>
-                            <br />
                             <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{backgroundColor:"#7882b0"}} size="small" className={FSModule.magic_button}>
                                 助けて！！！
                             </Button>
-                            <br />
                         </div>
                         <Divider />
                         <div className={FSModule.member}>
