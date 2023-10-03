@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import db from "../../firebase.config";
 
-export const Initialize= () => {
+export const CreateRoomModal= () => {
     const addBrain = () => {
         const teamName = prompt("Please enter the team name");
 
