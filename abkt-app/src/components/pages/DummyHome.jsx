@@ -12,9 +12,8 @@ export const DummyHome = () => {
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
                 <div className={DHomeModule.DummyHome}>
-                    <p className={DHomeModule.dummy_title}>アブラカタブレイン</p>
                     <div className={DHomeModule.title_icon}>
-                        <img src='../img/title_around_white.png' />
+                        <img src='../img/title_around_white.png' className={DHomeModule.icon} />
                     </div>
                     <div className={DHomeModule.button_area}>
                         <Button variant="outlined" style={{ color: "#666" }} size="large" className={DHomeModule.dummy_button}>部屋に入る</Button>

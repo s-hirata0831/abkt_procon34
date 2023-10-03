@@ -7,18 +7,15 @@
     flex-direction: column;
 }
 
+.icon{
+    height: 100%;
+    width: 100%;
+}
+
 .title_icon{
     align-items: center;
     display: flex;
     flex-direction: column;
-}
-
-.dummy_title{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Potta One', cursive;
-    font-size: 50px;
 }
 
 .dummy_button{
