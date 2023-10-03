@@ -7,11 +7,10 @@
     flex-direction: column;
 }
 
-.dummy_home{
-    border-radius: 8px;
-    font-family: 'Kiwi Maru', serif;
-    font-size: 25px;
-    margin-bottom: 1rem;
+.title_icon{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .dummy_title{
@@ -22,8 +21,9 @@
     font-size: 50px;
 }
 
-.title_icon{
-    align-items: center;
-    display: flex;
-    flex-direction: column
+.dummy_button{
+    border-radius: 8px !important;
+    font-family: 'Kiwi Maru', serif !important;
+    font-size: 25px !important;
+    margin-bottom: 1rem !important;
 }

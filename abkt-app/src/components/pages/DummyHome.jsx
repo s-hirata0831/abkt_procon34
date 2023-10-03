@@ -15,8 +15,8 @@ export const DummyHome = () => {
                     <img src='../img/title_around_white.png' />
                 </div>
                 <div className={DHomeModule.button_area}>
-                    <Button variant="outlined" style={{ color: "#666" }} size="large" className={DHomeModule.dummy_home}>部屋に入る</Button>
-                    <Button variant="contained" style={{ backgroundColor: "#7882b0" }} size="large" className={DHomeModule.dummy_home}> 部屋を作る</Button>
+                    <Button variant="outlined" style={{ color: "#666" }} size="large" className={DHomeModule.dummy_button}>部屋に入る</Button>
+                    <Button variant="contained" style={{ backgroundColor: "#7882b0" }} size="large" className={DHomeModule.dummy_button}> 部屋を作る</Button>
                 </div>
             </div>
         </>

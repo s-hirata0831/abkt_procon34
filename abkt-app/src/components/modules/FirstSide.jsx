@@ -30,7 +30,7 @@ function Timer({ expiryTimestamp }) {
 
 export const FirstSide = () => {
     const time = new Date();
-    time.setSeconds(time.getSeconds());//10分タイマー
+    time.setSeconds(time.getSeconds());
 
     return (
         <>

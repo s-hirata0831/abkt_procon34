@@ -19,7 +19,7 @@ export const FirstPhase = () => {
                         <FirstSide />
                     </Grid>
                     <Grid item xs={8} className={FPModule.icon_around}>
-                        <img src='../img/brainFirst.png' className="{styles.icon}" />
+                        <img src='../img/brainFirst.png'/>
                     </Grid>
                 </Grid>
             </div>
