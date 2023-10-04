@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+
 
 .span{
     display:block;
@@ -18,11 +20,11 @@
 }
 
 .icon{
-    max-width: 35%;
+    max-width:30%;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left:50%;
-    transform: translate(-135%, -60%);
+    transform:translate(-45%,10%);
     margin: 0;
     padding: 0;
 }
@@ -31,9 +33,14 @@
     background: rgba(255,255,255,0.3);
 }
 
+.colors{
+    background-color:rgba(225,230,140,0.7);
+}
+
 .text{
     font-size:3vw;
     transform:translate(2% , -700%);
+    font-family: 'Aoboshi One', serif;
 }
 
 .title{
@@ -51,70 +58,40 @@
     position:absolute;
     width:40%;
     height:10%;
-    background-color:#CCC;
+    background-color:orange;
     top: 25%;
     right:5%;
     font-size:5vw;
     padding: 2% 0;
+    font-family: 'Aoboshi One', serif;
 }
 
 .hold:hover{
-    background-color:blue;
+    background-color:green;
 }
 
 .hold:active{
-    background-color:red;/*クリック時とホバー時のカラーは随時変更*/
+    background-color:green;/*クリック時とホバー時のカラーは随時変更*/
 }
 
 .join{
     position:absolute;
     width:40%;
     height:10%;
-    background-color:#CCC;
+    background-color:orange;
     top:55%;
     right:5%;
     font-size:5vW;
     padding: 2% 0;
+    font-family: 'Aoboshi One', serif;
 }
 
 .join:hover{
-    background-color:blue;
+    background-color:white;
 }
 
 .join:active{
-    background-color:red;
-}
-
-/*What's アブラカタブレイン*/
-.what{
-    display:flex;
-    align-items:stretch;
-}
-
-.what span{
-    color:red;
-}
-
-.what_abkt{
-    display:block;
-    font-size:8vw;
-    width:150%;
-    margin:20px;
-}
-
-.what_abkt_order{
-    flex-direction:column;
-}
-
-.explain{
-    width:80%;
-    flex-direction:column;
-    font-size :3vw;
-    margin:20px;
-}
-
-.explain_order{
-    flex-direction:column;
+    background-color:white;
 }
 
 .detail{
@@ -123,20 +100,15 @@
     width:25%;
     height:15%;
     font-size:3vw;
-    background-color:#CCC;
+    background-color:orange;
     margin:50px 0 0 0;
+    font-family: 'Aoboshi One', serif;
 }
 
 .detail:hover{
-    background-color:blue;
+    background-color:white;
 }
 
 .detail:active{
-    background-color:red;
-}
-
-.book{
-    width:30%;
-    height:30%;
-    transform:translate(20% , -50%);
+    background-color:white;
 }
