@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from '../modules/Header';
+import FPModule from '../../styles/FirstPhase.module.css';
+import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
 import { First } from '../modules/First';
+import { FirstSide } from '../modules/FirstSide';
 
-export const FirstPhase = () =>{
+export const FirstPhase = () => {
     return (
         <>
-            <First />
+            <div className={FPModule.whole}>
+                <CssBaseline />
+                <Grid container spacing={2}>
+                    <Grid item xs={8}>
+                        <First />
+                    </Grid>
+                    <Grid item xs={4}>
+                        <FirstSide />
+                    </Grid>
+                    <Grid item xs={8} className={FPModule.icon_around}>
+                        <img src='../img/brainFirst.png' className="{styles.icon}" />
+                    </Grid>
+                </Grid>
+            </div>
         </>
     );
 };
