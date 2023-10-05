@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../styles/CreateRoomModal.module.css"
 import { StyledEngineProvider } from "@mui/material";
 import db from "../../firebase.config";
 
@@ -23,6 +24,7 @@ export const CreateRoomModal = () => {
     return (
         <>
             <StyledEngineProvider injectFirst>
+                <p>死んでください。</p>
                 <input value={placeText} />
                 <button onClick={onClickAdd}>生成</button>
             </StyledEngineProvider>
