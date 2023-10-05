@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Header from './components/modules/Header';
 import { HomePage } from './components/pages/HomePage';
-import { Initialize } from "./components/pages/Initialize";
+import { DummyHome } from "./components/pages/DummyHome";
 import { FirstPhase } from './components/pages/FirstPhase';
 import { FirstSide } from "./components/modules/FirstSide";
 import { NotFound } from "./components/pages/NotFound";
@@ -15,7 +15,7 @@ export const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Initialize" element={<Initialize />} />
+        <Route path="/DummyHome" element={<DummyHome />} />
         <Route path="/FirstPhase" element={<FirstPhase />} />
         <Route path="/FirstSide" element={<FirstSide />} />
         <Route path="*" element={<NotFound/>} />

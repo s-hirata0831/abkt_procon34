@@ -1,4 +1,5 @@
 # abkt_procon34
+![pictureOfReadMe](https://github.com/s-hirata0831/abkt_procon34/assets/92676047/9606536a-6cfc-4aa0-b475-9f7bee476a20)
 このリポジトリは，第34回全国高等専門学校プログラミングコンテスト課題部門出場作品  
 **アブラカタブレイン**の作業リポジトリです。  
 ## 作品制作  

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+.button_area{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    height: 50%;
+    width: 50%;
+}
+
+.title_icon{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.dummy_button{
+    border-radius: 8px;
+    font-family: 'Kiwi Maru', serif;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
