@@ -28,6 +28,7 @@ export const DummyHome = () => {
                             onClose={handleClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
+                            className={DHomeModule.modal}
                         >
                             <Box className={DHomeModule.modal_box}>
                                 <CreateRoomModal />
