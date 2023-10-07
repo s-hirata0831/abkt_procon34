@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import DHomeModule from "../../styles/DummyHome.module.css";
+import { Link } from 'react-router-dom';
 import { CreateRoomModal } from "../modules/CreateRoomModal";
 import { StyledEngineProvider } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CssBaseline from '@mui/material/CssBaseline';
 import Modal from "@mui/material/Modal";
-import Typography from '@mui/material/Typography';
 
 export const DummyHome = () => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const id = 123;
 
     return (
         <>
@@ -34,6 +35,12 @@ export const DummyHome = () => {
                             </Box>
                         </Modal>
                         <Button variant="contained" style={{ backgroundColor: "#7882b0" }} size="large" className={DHomeModule.dummy_button}> 部屋に入る</Button>
+                        <Button variant="outlined" style={{ color: "#666"}} size="large" className={DHomeModule.dummy_button}>
+                            <Link to={`/Room/${id}`}>部屋を見る</Link>
+                        </Button>
+                        <Button variant="outlined" style={{ color: "#666"}} size="large" className={DHomeModule.dummy_button}>
+                            <Link to={`/CreateRoom`}>部屋を作る</Link>
+                        </Button>
                     </div>
                 </div>
             </StyledEngineProvider>
