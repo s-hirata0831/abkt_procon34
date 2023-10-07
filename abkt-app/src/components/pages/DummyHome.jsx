@@ -22,19 +22,18 @@ export const DummyHome = () => {
                         <img src='../img/title_around_white.png' className={DHomeModule.icon} />
                     </div>
                     <div className={DHomeModule.button_area}>
-                        <Button onClick={handleOpen} variant="outlined" style={{ color: "#666" }} size="large" className={DHomeModule.dummy_button}>部屋に入る</Button>
+                        <Button onClick={handleOpen} variant="outlined" style={{ color: "#666" }} size="large" className={DHomeModule.dummy_button}>部屋を作る</Button>
                         <Modal
                             open={open}
-                            onClose={handleClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                             className={DHomeModule.modal}
                         >
                             <Box className={DHomeModule.modal_box}>
-                                <CreateRoomModal />
+                                <CreateRoomModal onClose={handleClose}/>
                             </Box>
                         </Modal>
-                        <Button variant="contained" style={{ backgroundColor: "#7882b0" }} size="large" className={DHomeModule.dummy_button}> 部屋を作る</Button>
+                        <Button variant="contained" style={{ backgroundColor: "#7882b0" }} size="large" className={DHomeModule.dummy_button}> 部屋に入る</Button>
                     </div>
                 </div>
             </StyledEngineProvider>
