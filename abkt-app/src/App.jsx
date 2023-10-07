@@ -22,7 +22,4 @@ export const App = () => {
       </Routes>
     </BrowserRouter>
   );
-};
-/*<Button variant="outlined">
-          <Link to="/FirstPhase">第1フェーズ</Link>
-        </Button>*/
+}

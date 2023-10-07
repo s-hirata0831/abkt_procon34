@@ -10,6 +10,7 @@ import { addDoc, collection } from "firebase/firestore";
 
 export const CreateRoomModal = ({onClose}) => {
     const [password, setPassword] = useState("");
+
     const createRoom = async () => {
         //ここでコレクション名を定義
         const collectionRef = collection(db, "rooms");
@@ -18,7 +19,7 @@ export const CreateRoomModal = ({onClose}) => {
             //ここに保存したいデータを記入
             password: password,
         });
-        console.log("部屋のidです", docRef.id);
+        console.log("部屋のidです", docRef.id,"私のパスワード", password);
     };
 
     return (
