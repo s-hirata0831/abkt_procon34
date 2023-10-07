@@ -1,114 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
-
-
-.span{
-    display:block;
-    text-align:right;
+button{
+    color: white;
 }
+
+button:hover{
+    cursor: pointer;
+}
+
 /*home_header*/
 .home_header{
+    display:block;
     position: relative;
     text-align: center;
     font-size:36px;
 }
 
-.home_header img{
-    border-radius: 8px;
-    width: 100%;
-    margin-top: 10px;
-}
-
 .icon{
-    max-width:30%;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform:translate(-45%,10%);
-    margin: 0;
-    padding: 0;
-}
-
-.icon:hover{
-    background: rgba(255,255,255,0.3);
-}
-
-.colors{
-    background-color:rgba(225,230,140,0.7);
-}
-
-.text{
-    font-size:3vw;
-    transform:translate(2% , -700%);
-    font-family: 'Aoboshi One', serif;
-}
-
-.title{
-    position: absolute;
-    color: #f0e68c;
-    top: 70%;
-    max-width:50%;
-    left: 50%;
-    transform: translate(-127%, -60%);
-    font-size: 4vw;
-    font-family: 'Aoboshi One', serif;
-}
-
-.hold{
-    position:absolute;
-    width:40%;
-    height:10%;
-    background-color:orange;
-    top: 25%;
-    right:5%;
-    font-size:5vw;
-    padding: 2% 0;
-    font-family: 'Aoboshi One', serif;
-}
-
-.hold:hover{
-    background-color:green;
-}
-
-.hold:active{
-    background-color:green;/*クリック時とホバー時のカラーは随時変更*/
-}
-
-.join{
-    position:absolute;
-    width:40%;
-    height:10%;
-    background-color:orange;
-    top:55%;
-    right:5%;
-    font-size:5vW;
-    padding: 2% 0;
-    font-family: 'Aoboshi One', serif;
-}
-
-.join:hover{
-    background-color:white;
-}
-
-.join:active{
-    background-color:white;
+    display:flex;
+    flex-direction:column;
+    width:70%;
+    transform:translate(13%,0);
+    align-items:center;
 }
 
 .detail{
-    transform:translate(280% , 0);
     text-align:center;
-    width:25%;
-    height:15%;
-    font-size:3vw;
-    background-color:orange;
-    margin:50px 0 0 0;
-    font-family: 'Aoboshi One', serif;
-}
-
-.detail:hover{
-    background-color:white;
-}
-
-.detail:active{
-    background-color:white;
+    width:45%;
+    transform:translate(100%,0);
 }
