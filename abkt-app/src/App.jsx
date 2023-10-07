@@ -1,5 +1,6 @@
 import React from "react";
 import './styles/styles.css';
+import './firebase.config';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Header from './components/modules/Header';
