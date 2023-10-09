@@ -1,9 +1,12 @@
 import React, { useState, useRef } from "react";
-import CRModule from "../../styles/CreateRoom.module.css"
+import CRModule from "../../styles/CreateRoom.module.css";
+import { useNavigate } from 'react-router-dom'
+import { CreateRoomModal } from "../modules/CreateRoomModal";
 import { StyledEngineProvider } from "@mui/material";
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box"
+import Modal from "@mui/material/Modal";
 import Stack from "@mui/material/Stack";
 import TextField from '@mui/material/TextField';
 import db from "../../firebase.config";
@@ -16,6 +19,9 @@ export const CreateRoom = () => {
     const [exampleIdea, setExampleIdea] = useState("");
     const [limitSecondPhase, setLimitSecondPhase] = useState("");
     const [peopleAmount, setPeopleAmount] = useState("");
+    const [modalOpen, setModalOpen] = useState(false);
+    const [roomId, setRoomId] = useState(null);
+    const [copyPass, setCopyPass] = useState(null);
 
     //入力内容が規則に沿っているかの評価関数
     const [teamNameError, setTeamNameError] = useState(false);
@@ -32,19 +38,45 @@ export const CreateRoom = () => {
     const limitSecondPhaseInputRef = useRef(null);
     const passwordInputRef = useRef(null);
 
+    // createRoom 関数内での検証とエラーメッセージの設定
     const createRoom = async () => {
-        //ランダムなIDを持つ部屋ドキュメント(Collection)を生成
-        const roomCollection = collection(db, "rooms");
-        //部屋のデータ
-        const roomData = await addDoc(roomCollection, {
-            //保存したいデータ
-            password: password,
-            teamName: teamName,
-            ideaTheme: ideaTheme,
-            exampleIdea: exampleIdea,
-            limitSecondPhase: limitSecondPhase,
-            peopleAmount: peopleAmount
-        });
+        // フォームの各項目の検証を行う
+        const isTeamNameValid = teamNameInputRef.current && teamNameInputRef.current.validity.valid;
+        const isIdeaThemeValid = ideaThemeInputRef.current && ideaThemeInputRef.current.validity.valid;
+        const isExampleIdeaValid = exampleIdeaInputRef.current && exampleIdeaInputRef.current.validity.valid;
+        const isPeopleAmountValid = peopleAmountInputRef.current && peopleAmountInputRef.current.validity.valid;
+        const isLimitSecondPhaseValid = limitSecondPhaseInputRef.current && limitSecondPhaseInputRef.current.validity.valid;
+        const isPasswordValid = passwordInputRef.current && passwordInputRef.current.validity.valid;
+
+        // 各項目の検証結果をもとにエラーステートを更新
+        setTeamNameError(!isTeamNameValid);
+        setIdeaThemeError(!isIdeaThemeValid);
+        setExampleIdeaError(!isExampleIdeaValid);
+        setPeopleAmountError(!isPeopleAmountValid);
+        setLimitSecondPhaseError(!isLimitSecondPhaseValid);
+        setPasswordError(!isPasswordValid);
+
+        // すべての項目が正しく入力されているか確認
+        if (isTeamNameValid && isIdeaThemeValid && isExampleIdeaValid && isPeopleAmountValid && isLimitSecondPhaseValid && isPasswordValid) {
+            // 正しく入力されていれば部屋を作成
+            const roomCollection = collection(db, "rooms");   //ランダムなIDを持つ部屋(Collection)ドキュメントを生成
+            //部屋のデータ
+            const roomData = await addDoc(roomCollection, {
+                password: password,
+                teamName: teamName,
+                ideaTheme: ideaTheme,
+                exampleIdea: exampleIdea,
+                limitSecondPhase: limitSecondPhase,
+                peopleAmount: peopleAmount
+            });
+            setRoomId(roomData.id);
+            setCopyPass(roomData.copyPass);
+            setModalOpen(true);
+
+        } else {
+            // 入力に誤りがある場合はエラーメッセージを表示
+            alert("入力に誤りがあります。確認してください。");
+        }
     };
 
     const handleChange = (inputRef, setError) => {
@@ -56,6 +88,11 @@ export const CreateRoom = () => {
                 setError(false);
             }
         }
+    };
+
+    const navigate = useNavigate();
+    const backToHome = () => {
+        navigate("/");
     };
 
     return (
@@ -106,10 +143,10 @@ export const CreateRoom = () => {
                             required
                             margin="normal"
                             error={exampleIdeaError}
-                            inputProps={{ maxLength: 25, minLength: 1 }}
+                            inputProps={{ maxLength: 40, minLength: 1 }}
                             inputRef={exampleIdeaInputRef}
                             defaultValue={""}
-                            label="アイデア(呪文)の例 [25文字以内]"
+                            label="アイデア(呪文)の例 [40文字以内]"
                             variant="standard"
                             helperText={exampleIdeaInputRef?.current?.validationMessage}
                             onChange={(e) => {
@@ -156,7 +193,7 @@ export const CreateRoom = () => {
                             required
                             margin="normal"
                             error={passwordError}
-                            inputProps={{ maxLength: 25, minLength: 2, pattern:"^[0-9A-Za-z]+$" }}
+                            inputProps={{ maxLength: 25, minLength: 2, pattern: "^[0-9A-Za-z]+$" }}
                             inputRef={passwordInputRef}
                             type="password"
                             defaultValue={""}
@@ -168,7 +205,23 @@ export const CreateRoom = () => {
                                 handleChange(passwordInputRef, setPasswordError);
                             }}
                         />
-                        <Button variant="outlined" style={{color:"#7882b0"}} onClick={createRoom}>作成</Button>
+                        <Stack spacing={2} my={2} direction="row" justifyContent="end" className={CRModule.button_around}>
+                            <Button variant="outlined" style={{ color: "#7882b0" }} className={CRModule.button_icon} onClick={backToHome}>Homeへ戻る</Button>
+                            <Button variant="contained" style={{ backgroundColor: "#7882b0" }} className={CRModule.button_icon} onClick={createRoom}>完了</Button>
+                        </Stack>
+
+                        {modalOpen && (
+                            <Modal
+                                open={modalOpen}
+                                aria-labelledby="modal-modal-title"
+                                aria-describedby="modal-modal-description"
+                                className={CRModule.modal}
+                            >
+                                <Box className={CRModule.modal_box}>
+                                    <CreateRoomModal roomId={roomId} password={copyPass}/>
+                                </Box>
+                            </Modal>
+                        )}
                     </Box>
                 </div>
             </StyledEngineProvider>
