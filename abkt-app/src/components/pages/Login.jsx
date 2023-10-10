@@ -3,7 +3,7 @@ import LModule from "../../styles/Login.module.css";
 import CssBaseline from '@mui/material/CssBaseline';
 import { StyledEngineProvider, TextField } from "@mui/material";
 import Button from "@mui/material/Button";
-import Boc from "@mui/material/Box";
+import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 
 export const Login = () => {
@@ -16,7 +16,11 @@ export const Login = () => {
                     <TextField
                         fullWidth
                         required
-                        margin=
+                        margin="normal"
+                        label="ID"
+                        variant="standard"
+                        defaultvalue={""}
+                    />
                     <TextField
                         fullWidth
                         required

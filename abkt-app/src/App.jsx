@@ -11,6 +11,7 @@ import { FirstPhase } from './components/pages/FirstPhase';
 import { FirstSide } from "./components/modules/FirstSide";
 import { NotFound } from "./components/pages/NotFound";
 import { Room } from "./components/pages/rooms/Room";
+import { Login } from "./components/pages/Login";
 
 export const App = () => {
 return (
@@ -21,6 +22,7 @@ return (
         <Route path="/DummyHome" element={<DummyHome />} />
         <Route path="/FirstPhase" element={<FirstPhase />} />
         <Route path="/FirstSide" element={<FirstSide />} />
+        <Route path="/Login" element={<Login />} />
 
         <Route path="/CreateRoom" element={<CreateRoom />} />
         <Route path="/Room/:roomId" element={<Room />} />
