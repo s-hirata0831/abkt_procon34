@@ -21,7 +21,7 @@ export const CreateRoom = () => {
     const [peopleAmount, setPeopleAmount] = useState("");
     const [modalOpen, setModalOpen] = useState(false);
     const [roomId, setRoomId] = useState(null);
-    const [copyPass, setCopyPass] = useState(null);
+    const [roomPass, setRoomPass] = useState("");
 
     //入力内容が規則に沿っているかの評価関数
     const [teamNameError, setTeamNameError] = useState(false);
@@ -70,7 +70,7 @@ export const CreateRoom = () => {
                 peopleAmount: peopleAmount
             });
             setRoomId(roomData.id);
-            setCopyPass(roomData.copyPass);
+            setPassword(String(password));
             setModalOpen(true);
 
         } else {
@@ -202,6 +202,7 @@ export const CreateRoom = () => {
                             helperText={passwordInputRef?.current?.validationMessage}
                             onChange={(e) => {
                                 setPassword(e.target.value);
+                                setRoomPass();
                                 handleChange(passwordInputRef, setPasswordError);
                             }}
                         />
@@ -218,7 +219,7 @@ export const CreateRoom = () => {
                                 className={CRModule.modal}
                             >
                                 <Box className={CRModule.modal_box}>
-                                    <CreateRoomModal roomId={roomId} password={copyPass}/>
+                                    <CreateRoomModal roomId={roomId} password={password}/>
                                 </Box>
                             </Modal>
                         )}

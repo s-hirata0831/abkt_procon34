@@ -9,10 +9,10 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 
-export const CreateRoomModal = ({ roomId, copyPass}) => {
+export const CreateRoomModal = ({ roomId, password}) => {
     const [resultText, setResultText] = useState(roomId);
-    const [passwordText, setPasswordText] = useState(copyPass);
-    alert(copyPass);
+    const [passwordText, setPasswordText] = useState(password);
+    alert(password);
 
     const copyToClipboard = async () => {
         await global.navigator.clipboard.writeText(resultText);
@@ -42,7 +42,7 @@ export const CreateRoomModal = ({ roomId, copyPass}) => {
                         </Tooltip>
                     </Stack>
                     <Stack spacing={2} my={2} direction="row" alignItems="center" justifyContent="center">
-                        <p className={CRModule.content}>パスワード：{copyPass}</p>
+                        <p className={CRModule.content}>パスワード：{password}</p>
                         <Tooltip title="クリップボードにコピー" placement="top" arrow>
                             <IconButton color="primary" size="small" onClick={copyPassword}>
                                 <ContentCopyIcon fontSize="small" />
