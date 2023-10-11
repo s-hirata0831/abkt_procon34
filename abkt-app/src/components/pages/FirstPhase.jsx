@@ -13,15 +13,13 @@ export const FirstPhase = () => {
             <StyledEngineProvider injectFirst>
                 <div className={FPModule.whole}>
                     <CssBaseline />
+                    <Header />
                     <Grid container spacing={2}>
                         <Grid item xs={8}>
                             <First />
                         </Grid>
                         <Grid item xs={4}>
                             <FirstSide />
-                        </Grid>
-                        <Grid item xs={8} className={FPModule.icon_around}>
-                            <img src='../img/brainFirst.png' />
                         </Grid>
                     </Grid>
                 </div>

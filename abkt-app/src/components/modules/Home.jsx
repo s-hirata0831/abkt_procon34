@@ -15,16 +15,18 @@ export const Home = () => {
         </div>
         
         <div className={styles.home_header} >
-            <Link to={`/FirstPhase/`}>
+            <Link to={`/Login`}>
             <Button variant="contained" style={{backgroundColor:"#7882b0"}} size="large" className={styles.buttons}>
-                会議を開く
+                部屋に参加
             </Button>
             </Link>
             </div>
         <div className={styles.home_header} >
+            <Link to={`/CreateRoom`}>
             <Button variant="outlined"  size="large" className={styles.buttons}>
-                    会議に参加する
+                部屋を作成
             </Button>
+            </Link>
         </div>
 
         </StyledEngineProvider>

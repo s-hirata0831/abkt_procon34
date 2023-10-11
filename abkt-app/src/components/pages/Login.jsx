@@ -7,6 +7,7 @@ import {
 import { auth } from "../../firebase.config";
 import LModule from "../../styles/Login.module.css";
 import CssBaseline from '@mui/material/CssBaseline';
+import Header from "../modules/HeaderGuest";
 import { StyledEngineProvider, TextField } from "@mui/material";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -23,10 +24,6 @@ export const Login = () => {
     const [loginPassword, setLoginPassword] = useState("");
 
     const handleSubmit = async () => {
-        //e.preventDefault();
-        //const inId = loginId + '@example.com';
-        //setLoginId(inId);
-
         try {
             await signInWithEmailAndPassword(
                 auth,
@@ -49,6 +46,7 @@ export const Login = () => {
 
     return (
         <>
+            <Header />
             {/*ログインしている場合に，待機場所へ飛ぶ設定*/}
             {user ? (
                 <Navigate to={`/FirstPhase`} />

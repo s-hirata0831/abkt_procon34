@@ -3,7 +3,6 @@ import './styles/styles.css';
 import './firebase.config';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Header from './components/modules/Header';
 import { CreateRoom } from './components/pages/CreateRoom';
 import { HomePage } from './components/pages/HomePage';
 import { DummyHome } from "./components/pages/DummyHome";
@@ -18,7 +17,6 @@ import { Whatabkt } from "./components/pages/Whatabkt";
 export const App = () => {
 return (
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/DummyHome" element={<DummyHome />} />

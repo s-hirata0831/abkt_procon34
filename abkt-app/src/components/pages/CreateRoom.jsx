@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import CRModule from "../../styles/CreateRoom.module.css";
+import Header from "../modules/HeaderGuest";
 import { useNavigate } from 'react-router-dom'
 import { CreateRoomModal } from "../modules/CreateRoomModal";
 import { StyledEngineProvider } from "@mui/material";
@@ -125,6 +126,7 @@ export const CreateRoom = () => {
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
+                <Header />
                 <div className={CRModule.around_page}>
                     <Box className={CRModule.box}>
                         <p className={CRModule.title}>部屋を作成</p>
