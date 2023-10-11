@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+span{
+    color:red;
+}
+
+.flex{
+    display:flex;
+    
+}
+
+.section_story{
+    font-size:5rem;
+}
+
+.section_how_to{
+    font-size:5rem;
+}
+
+.img_story{
+    width:40%;
+    height:auto;
+    margin:10% 0 0 0;
+    flex-shrink: 0;
+    flex-grow:1;
+}
+
+.img_how_to{
+    width:60%;
+    height:auto;
+    margin:20% 0 10% 0;
+    flex-shrink: 0;
+}
+
+.story{
+    margin:0 0 0 5%;
+    max-width:50%;
+}
+
+.how_to{
+    margin:3% 5% 0 0;
+}
+
+.phase{
+    font-size:2em;
+}
+
+.flex-container{
+    flex-direction:column;
+}

@@ -12,6 +12,8 @@ import { FirstSide } from "./components/modules/FirstSide";
 import { NotFound } from "./components/pages/NotFound";
 import { Room } from "./components/pages/rooms/Room";
 import { Login } from "./components/pages/Login";
+import { Whatabkt_explain } from "./components/modules/Whatabkt_explain";
+import { Whatabkt } from "./components/pages/Whatabkt";
 
 export const App = () => {
 return (
@@ -28,6 +30,8 @@ return (
         <Route path="/Room/:roomId" element={<Room />} />
         <Route path="/Room/:roomId/FirstPhase" element={<FirstPhase />} />
         <Route path="*" element={<NotFound/>} />
+        <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
+        <Route path="/Whatabkt" element={<Whatabkt/>} />
       </Routes>
     </BrowserRouter>
   );

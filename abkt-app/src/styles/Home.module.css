@@ -1,142 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Aoboshi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
-.span{
-    display:block;
-    text-align:right;
+button{
+    color: white;
+    font-family:"kiwi maru", serif;
 }
+
+button:hover{
+    cursor: pointer;
+}
+
 /*home_header*/
 .home_header{
+    display:block;
     position: relative;
     text-align: center;
     font-size:36px;
 }
 
-.home_header img{
-    border-radius: 8px;
-    width: 100%;
-    margin-top: 10px;
-}
-
 .icon{
-    max-width: 35%;
-    position: absolute;
-    top: 40%;
-    left:50%;
-    transform: translate(-135%, -60%);
-    margin: 0;
-    padding: 0;
-}
-
-.icon:hover{
-    background: rgba(255,255,255,0.3);
-}
-
-.text{
-    font-size:3vw;
-    transform:translate(2% , -700%);
-}
-
-.title{
-    position: absolute;
-    color: #f0e68c;
-    top: 70%;
-    max-width:50%;
-    left: 50%;
-    transform: translate(-127%, -60%);
-    font-size: 4vw;
-    font-family: 'Aoboshi One', serif;
-}
-
-.hold{
-    position:absolute;
-    width:40%;
-    height:10%;
-    background-color:#CCC;
-    top: 25%;
-    right:5%;
-    font-size:5vw;
-    padding: 2% 0;
-}
-
-.hold:hover{
-    background-color:blue;
-}
-
-.hold:active{
-    background-color:red;/*クリック時とホバー時のカラーは随時変更*/
-}
-
-.join{
-    position:absolute;
-    width:40%;
-    height:10%;
-    background-color:#CCC;
-    top:55%;
-    right:5%;
-    font-size:5vW;
-    padding: 2% 0;
-}
-
-.join:hover{
-    background-color:blue;
-}
-
-.join:active{
-    background-color:red;
-}
-
-/*What's アブラカタブレイン*/
-.what{
     display:flex;
-    align-items:stretch;
-}
-
-.what span{
-    color:red;
-}
-
-.what_abkt{
-    display:block;
-    font-size:8vw;
-    width:150%;
-    margin:20px;
-}
-
-.what_abkt_order{
     flex-direction:column;
+    width:70%;
+    transform:translate(13%,0);
+    align-items:center;
 }
 
-.explain{
-    width:80%;
-    flex-direction:column;
-    font-size :3vw;
-    margin:20px;
-}
-
-.explain_order{
-    flex-direction:column;
+.buttons{
+    width:180px;
+    height:10%;
+    font-family:"kiwi maru",serif;
+    border-radius: 8px;
 }
 
 .detail{
-    transform:translate(280% , 0);
     text-align:center;
-    width:25%;
-    height:15%;
-    font-size:3vw;
-    background-color:#CCC;
-    margin:50px 0 0 0;
-}
-
-.detail:hover{
-    background-color:blue;
-}
-
-.detail:active{
-    background-color:red;
-}
-
-.book{
-    width:30%;
-    height:30%;
-    transform:translate(20% , -50%);
+    width:45%;
+    transform:translate(100%,0);
+    font-family:"kiwi maru", serif;
 }

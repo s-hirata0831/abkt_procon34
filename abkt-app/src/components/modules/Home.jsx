@@ -1,40 +1,33 @@
 import React from 'react';
 import styles from '../../styles/Home.module.css';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import {StyledEngineProvider} from '@mui/material';
 
 export const Home = () => {
     return(
         <>
-            <div className={styles.home_header}>
-                <img src='./img/home_back.rokuta.jpg' />
-                <Link to={`/FirstPhase/`}>
-                    <img src='./img/brain.png' className={styles.icon} />
-                </Link>
-                <p className={styles.title}>アブラカタブレイン</p>
-                <p className={styles.hold}>会議を開く</p>
-                <p className={styles.join}>会議に参加する</p>
+        <StyledEngineProvider injectFirst>
+        <CssBaseline />
+        <div className={styles.icon}>
+            <img src='./img/home.icon.png' className={styles.icon} />
+        </div>
+        
+        <div className={styles.home_header} >
+            <Link to={`/FirstPhase/`}>
+            <Button variant="contained" style={{backgroundColor:"#7882b0"}} size="large" className={styles.buttons}>
+                会議を開く
+            </Button>
+            </Link>
             </div>
-            <div className={styles.what}>
-                
-                   <p className={styles.what_abkt}>What'sアブラカタブレイン</p>
+        <div className={styles.home_header} >
+            <Button variant="outlined"  size="large" className={styles.buttons}>
+                    会議に参加する
+            </Button>
+        </div>
 
-               
-                <div className={styles.explain_order}>
-                   <div className={styles.explain}>
-                       ・<span>ロールプレイング</span>と<span>ブレインストーミング</span>を融合させた画期的なアイデア出しの場をオンライン上で実現するシステム
-                   </div>
-                   <div className={styles.explain}>
-                   ・各参加者にロールを割り当て、そのロールになりきってアイデア出しを行う
-                   </div>
-                </div>
-            </div>
-            
-                <p className={styles.detail}>詳細はこちら</p>
-                <img className={styles.book} src='./img/home_book.png'/>
-            
-            <div>
-                <p className={styles.text}>大魔導書アブラカタブレイン</p>
-            </div>
+        </StyledEngineProvider>
         </>
     );
 }
