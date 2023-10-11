@@ -11,26 +11,22 @@ export const Home = () => {
         <StyledEngineProvider injectFirst>
         <CssBaseline />
         <div className={styles.icon}>
-            <img src='.\img\home.icon.png' className={styles.icon} />
+            <img src='./img/home.icon.png' className={styles.icon} />
         </div>
         
         <div className={styles.home_header} >
             <Link to={`/FirstPhase/`}>
-            <Button variant="contained" style={{backgroundColor:"#7882b0"}} size="large">
+            <Button variant="contained" style={{backgroundColor:"#7882b0"}} size="large" className={styles.buttons}>
                 会議を開く
             </Button>
             </Link>
             </div>
         <div className={styles.home_header} >
-            <Button variant="outlined"  size="large">
+            <Button variant="outlined"  size="large" className={styles.buttons}>
                     会議に参加する
             </Button>
         </div>
-        <div className={styles.detail} >
-            <Button variant="outlined" size="large" className={styles.detail}>  
-                What's アブラカタブレイン
-            </Button>
-        </div>
+
         </StyledEngineProvider>
         </>
     );

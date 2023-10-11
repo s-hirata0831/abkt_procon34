@@ -2,6 +2,7 @@
 
 button{
     color: white;
+    font-family:"kiwi maru", serif;
 }
 
 button:hover{
@@ -24,8 +25,16 @@ button:hover{
     align-items:center;
 }
 
+.buttons{
+    width:180px;
+    height:10%;
+    font-family:"kiwi maru",serif;
+    border-radius: 8px;
+}
+
 .detail{
     text-align:center;
     width:45%;
     transform:translate(100%,0);
+    font-family:"kiwi maru", serif;
 }

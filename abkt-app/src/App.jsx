@@ -8,6 +8,8 @@ import { Initialize } from "./components/pages/Initialize";
 import { FirstPhase } from './components/pages/FirstPhase';
 import { FirstSide } from "./components/modules/FirstSide";
 import { NotFound } from "./components/pages/NotFound";
+import { Whatabkt_explain } from "./components/modules/Whatabkt_explain";
+import { Whatabkt } from "./components/pages/Whatabkt";
 
 export const App = () => {
   return (
@@ -19,6 +21,8 @@ export const App = () => {
         <Route path="/FirstPhase" element={<FirstPhase />} />
         <Route path="/FirstSide" element={<FirstSide />} />
         <Route path="*" element={<NotFound/>} />
+        <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
+        <Route path="/Whatabkt" element={<Whatabkt/>} />
       </Routes>
     </BrowserRouter>
   );
