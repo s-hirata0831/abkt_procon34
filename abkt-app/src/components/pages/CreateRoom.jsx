@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import CRModule from "../../styles/CreateRoom.module.css";
 import { useNavigate } from 'react-router-dom'
 import { CreateRoomModal } from "../modules/CreateRoomModal";
@@ -11,6 +11,8 @@ import Stack from "@mui/material/Stack";
 import TextField from '@mui/material/TextField';
 import db from "../../firebase.config";
 import { addDoc, collection } from "firebase/firestore";
+import { auth } from "../../firebase.config.js";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export const CreateRoom = () => {
     const [password, setPassword] = useState("");
@@ -22,6 +24,10 @@ export const CreateRoom = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [roomId, setRoomId] = useState(null);
     const [roomPass, setRoomPass] = useState("");
+
+    //auth
+    const [registerId, setRegisterId] = useState("");
+    const [registerPassword, setRegisterPassword] = useState("");
 
     //入力内容が規則に沿っているかの評価関数
     const [teamNameError, setTeamNameError] = useState(false);
@@ -69,6 +75,22 @@ export const CreateRoom = () => {
                 limitSecondPhase: limitSecondPhase,
                 peopleAmount: peopleAmount
             });
+
+            // 新しいメールアドレスを設定
+            const newRegisterId = roomData.id + '@example.com';
+            setRegisterId(newRegisterId);
+
+            try {
+                await createUserWithEmailAndPassword(
+                    auth,
+                    newRegisterId,
+                    password
+                );
+            } catch (error) {
+                console.error("エラー発生", error);
+                alert("正しく入力してください");
+            }
+
             setRoomId(roomData.id);
             setPassword(String(password));
             setModalOpen(true);
@@ -78,6 +100,10 @@ export const CreateRoom = () => {
             alert("入力に誤りがあります。確認してください。");
         }
     };
+
+    useEffect(() => {
+        console.log("登録されたメアド:", registerId);
+    },[registerId]);
 
     const handleChange = (inputRef, setError) => {
         if (inputRef.current) {
@@ -193,11 +219,11 @@ export const CreateRoom = () => {
                             required
                             margin="normal"
                             error={passwordError}
-                            inputProps={{ maxLength: 25, minLength: 2, pattern: "^[0-9A-Za-z]+$" }}
+                            inputProps={{ maxLength: 25, minLength: 6, pattern: "^[0-9A-Za-z]+$" }}
                             inputRef={passwordInputRef}
                             type="password"
                             defaultValue={""}
-                            label="パスワード [半角英数字25文字以内]"
+                            label="パスワード [半角英数字6文字以上25文字以内]"
                             variant="standard"
                             helperText={passwordInputRef?.current?.validationMessage}
                             onChange={(e) => {
@@ -219,7 +245,7 @@ export const CreateRoom = () => {
                                 className={CRModule.modal}
                             >
                                 <Box className={CRModule.modal_box}>
-                                    <CreateRoomModal roomId={roomId} password={password}/>
+                                    <CreateRoomModal roomId={roomId} password={password} />
                                 </Box>
                             </Modal>
                         )}
