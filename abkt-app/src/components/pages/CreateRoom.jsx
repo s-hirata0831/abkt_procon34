@@ -102,7 +102,7 @@ export const CreateRoom = () => {
     };
 
     useEffect(() => {
-        console.log("登録されたメアド:", registerId);
+        console.log("登録されたid:", registerId);
     },[registerId]);
 
     const handleChange = (inputRef, setError) => {
