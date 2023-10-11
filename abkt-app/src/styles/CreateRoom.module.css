@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+.around_page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button_around{
+    margin-bottom:250x;
+}
+
+.button_icon{
+    font-family: 'Kiwi Maru', serif;
+}
+
+.box{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 400;
+    margin-bottom: 20px;
+}
+
+.body_text{
+    font-family: 'Kiwi Maru', serif;
+    font-size: 20px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+}
+
+.around_icon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon{
+    height: 15%;
+    width: 15%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.modal{
+    position: 'absolute';
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+}
+
+.modal_box{
+    padding: 20px;
+    transform: 'translate(-50%, -50%)';
+    width: 50%;
+    background-color: white;
+    border: '2px solid #000';
+    border-radius: 8px;
+    box-shadow: 24;
+}

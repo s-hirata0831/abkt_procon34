@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap');
+@font-face {
+    font-family: 'IPAexGothic';
+    src: local('IPAexGothic'), url('../font/ipaexg.ttf') format('truetype');
+}
 
 .button_icon{
-    font-family: 'Kiwi Maru', serif;
+    font-family: 'IPAexGothic', sans-serif;
+}
+
+.content{
+    font-family: 'IPAexGothic', sans-serif;
 }
 
 .title{
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: 'Yusei Magic', sans-serif;
+    font-family: 'IPAexGothic', sans-serif;
     font-size: 20px;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'IPAexGothic', sans-serif;
+    font-size: 15px;
+    color: red;
 }
