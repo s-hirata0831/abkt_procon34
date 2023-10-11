@@ -11,6 +11,7 @@ import { FirstSide } from "./components/modules/FirstSide";
 import { NotFound } from "./components/pages/NotFound";
 import { Room } from "./components/pages/rooms/Room";
 import { Login } from "./components/pages/Login";
+import { ReadyFirst } from "./components/pages/ReadyFirst";
 import { Whatabkt_explain } from "./components/modules/Whatabkt_explain";
 import { Whatabkt } from "./components/pages/Whatabkt";
 
@@ -23,13 +24,14 @@ return (
         <Route path="/FirstPhase" element={<FirstPhase />} />
         <Route path="/FirstSide" element={<FirstSide />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
+        <Route path="/Whatabkt" element={<Whatabkt/>} />
 
         <Route path="/CreateRoom" element={<CreateRoom />} />
         <Route path="/Room/:roomId" element={<Room />} />
+        <Route path="/Room/:roomId/ReadyFirst" element={<ReadyFirst />} />
         <Route path="/Room/:roomId/FirstPhase" element={<FirstPhase />} />
         <Route path="*" element={<NotFound/>} />
-        <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
-        <Route path="/Whatabkt" element={<Whatabkt/>} />
       </Routes>
     </BrowserRouter>
   );

@@ -49,7 +49,7 @@ export const Login = () => {
             <Header />
             {/*ログインしている場合に，待機場所へ飛ぶ設定*/}
             {user ? (
-                <Navigate to={`/FirstPhase`} />
+                <Navigate to={`FirstPhase`} />
             ) : (
                 <StyledEngineProvider injectFirst>
                     <CssBaseline />
@@ -72,6 +72,16 @@ export const Login = () => {
                             required
                             margin="normal"
                             label="パスワード"
+                            variant="standard"
+                            type="password"
+                            value={loginPassword}
+                            onChange={(e) => setLoginPassword(e.target.value)}
+                        />
+                        <TextField
+                            fullWidth
+                            required
+                            margin="normal"
+                            label="自分の参加表示名"
                             variant="standard"
                             type="password"
                             value={loginPassword}
