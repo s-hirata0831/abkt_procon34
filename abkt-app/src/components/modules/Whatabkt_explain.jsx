@@ -18,7 +18,7 @@ export const Whatabkt_explain = () => {
                 <img src='./img/abkt_explain.png' alt="実験" className={styles.img_story} />
         </div>
         <div className={styles.flex}>
-            <div >
+            <div>
                 <img src='./img/how_to_test.png' alt="テスト中" className={styles.img_how_to} />
             </div>
             <div className={styles.how_to}>

@@ -9,6 +9,12 @@ button:hover{
     cursor: pointer;
 }
 
+.button_around{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 /*home_header*/
 .home_header{
     display:block;
@@ -26,15 +32,9 @@ button:hover{
 }
 
 .buttons{
-    width:180px;
-    height:10%;
-    font-family:"kiwi maru",serif;
     border-radius: 8px;
+    font-family: 'Kiwi Maru', serif;
+    font-size: 25px;
+    margin-bottom: 1rem;
 }
 
-.detail{
-    text-align:center;
-    width:45%;
-    transform:translate(100%,0);
-    font-family:"kiwi maru", serif;
-}

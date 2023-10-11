@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+
+.text{
+    text-align:center;
+    font-size:2em;
+    margin:0 0 1% 0;
+    font-family: 'Kiwi Maru' , serif;
+}
+
+.spell{
+    text-align:center;
+    font-size:2em;
+    font-family: 'Kiwi Maru' , serif;
+}
+
+.un_ordered{
+    display:flex;
+    flex-direction:column;
+    list-style:none;
+    font-size:3rem;
+    gap: 15vh 0;
+}

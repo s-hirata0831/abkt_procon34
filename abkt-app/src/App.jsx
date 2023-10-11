@@ -14,6 +14,8 @@ import { Room } from "./components/pages/rooms/Room";
 import { Login } from "./components/pages/Login";
 import { Whatabkt_explain } from "./components/modules/Whatabkt_explain";
 import { Whatabkt } from "./components/pages/Whatabkt";
+import { Result_module } from "./components/modules/Result_module";
+import { Result } from "./components/pages/Result";
 
 export const App = () => {
 return (
@@ -32,6 +34,8 @@ return (
         <Route path="*" element={<NotFound/>} />
         <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
         <Route path="/Whatabkt" element={<Whatabkt/>} />
+        <Route path="/Result_module" elenemt={<Result_module/>} />
+        <Route path="/Result" element={<Result/>} />
       </Routes>
     </BrowserRouter>
   );

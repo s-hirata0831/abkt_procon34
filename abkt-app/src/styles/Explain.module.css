@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
-span{
-    color:red;
-}
+
 
 .flex{
     display:flex;
@@ -26,9 +24,9 @@ span{
 }
 
 .img_how_to{
-    width:60%;
+    width:100%;
     height:auto;
-    margin:20% 0 10% 0;
+    margin:35% 0 10% 0;
     flex-shrink: 0;
 }
 
@@ -39,6 +37,7 @@ span{
 
 .how_to{
     margin:3% 5% 0 0;
+    width:60%;
 }
 
 .phase{
