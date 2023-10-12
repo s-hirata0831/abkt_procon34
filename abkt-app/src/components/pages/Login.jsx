@@ -49,7 +49,7 @@ export const Login = () => {
             <Header />
             {/*ログインしている場合に，待機場所へ飛ぶ設定*/}
             {user ? (
-                <Navigate to={`FirstPhase`} />
+                <Navigate to={`/room/abkt/FirstPhase`} />
             ) : (
                 <StyledEngineProvider injectFirst>
                     <CssBaseline />

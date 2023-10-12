@@ -41,7 +41,7 @@ export const FirstSide = () => {
                     <Card position="static" style={{ backgroundColor: "#FDF5DE" }}>
                         <List component="nav">
                             <div className={FSModule.icon_around}>
-                                <img src='../img/brainFirst.png' className="{FSModule.icon_around}" />
+                                <img src='./img/brainFirst.png' className="{FSModule.icon_around}" />
                             </div>
                             <Divider />
                             <div className={FSModule.theme}>
