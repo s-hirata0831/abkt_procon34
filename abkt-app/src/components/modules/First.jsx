@@ -9,6 +9,22 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import TextField from '@mui/material/TextField';
 
 export const First = () => {
+    const [ideaText, setIdeaText] = useState("");
+    const [idea, setIdea] = useState([]);
+    const onChangeText = (event) => setIdeaText(event.target.value);
+
+    const onClickAdd = () =>{
+        if (ideaText === "") return;
+        const newIdea = [...idea, ideaText];
+        setIdea(newIdea);
+        setIdeaText("");
+    };
+
+    const onClickDelete = (index) => {
+        const newIdea = [...idea];
+        newIdea.splice(index, 1);
+        setIdea(newIdea);
+    }
 
     return (
         <>
@@ -24,10 +40,10 @@ export const First = () => {
                     {/*InputArea*/}
                     <div className={styles.input_area}>
                         <div className={styles.input_form}>
-                            <TextField label={'アイデアを入力'} variant="filled" />
+                            <TextField label={'アイデアを入力'} variant="filled" value={ideaText} onChange={onChangeText} />
                         </div>
                         <div className={styles.input_button}>
-                            <Button variant="contained" startIcon={<AddCommentIcon />} style={{ backgroundColor: "#7882b0" }} size="large">
+                            <Button variant="contained" startIcon={<AddCommentIcon />} style={{ backgroundColor: "#7882b0" }} size="large" onClick={onClickAdd}>
                                 追加
                             </Button>
                         </div>
@@ -37,24 +53,14 @@ export const First = () => {
                     <div className={styles.idea_area}>
                         <p className={styles.title}>思いついたアイデア</p>
                         <ul>
-                            <div className={styles.idea_list}>
-                                <li>サツマイモ</li>
-                                <Button variant="contained" startIcon={<DeleteOutlineIcon />} style={{ backgroundColor: "#7882b0" }} size="small">
-                                    削除
-                                </Button>
-                            </div>
-                            <div className={styles.idea_list}>
-                                <li>松茸</li>
-                                <Button variant="contained" startIcon={<DeleteOutlineIcon />} style={{ backgroundColor: "#7882b0" }} size="small">
-                                    削除
-                                </Button>
-                            </div>
-                            <div className={styles.idea_list}>
-                                <li>松茸</li>
-                                <Button variant="contained" startIcon={<DeleteOutlineIcon />} style={{ backgroundColor: "#7882b0" }} size="small">
-                                    削除
-                                </Button>
-                            </div>
+                            {idea.map((list, index) => {
+                                return (
+                                    <div key={list} className={styles.idea_list}>
+                                        <li>{list}</li>
+                                        <Button variant="contained" startIcon={<DeleteOutlineIcon />} style={{backgroundColor: "#7882b0"}} size="small" onClick={() => onClickDelete(index)}>削除</Button>
+                                    </div>
+                                );
+                            })}
                         </ul>
                     </div>
                 </Card>

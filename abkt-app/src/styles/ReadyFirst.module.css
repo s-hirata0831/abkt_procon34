@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
+
+.box{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400;
+    margin-bottom: 20px;
+}
+
+.around_icon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+}
+
+.button_icon{
+    font-family: 'Kiwi Maru', serif;
+}
+
+.button_around{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import CRModule from "../../styles/CreateRoom.module.css";
+import Header from "../modules/HeaderGuest";
 import { useNavigate } from 'react-router-dom'
 import { CreateRoomModal } from "../modules/CreateRoomModal";
 import { StyledEngineProvider } from "@mui/material";
@@ -10,7 +11,7 @@ import Modal from "@mui/material/Modal";
 import Stack from "@mui/material/Stack";
 import TextField from '@mui/material/TextField';
 import db from "../../firebase.config";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, setDoc, updateDoc } from "firebase/firestore";
 import { auth } from "../../firebase.config.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -102,7 +103,7 @@ export const CreateRoom = () => {
     };
 
     useEffect(() => {
-        console.log("登録されたメアド:", registerId);
+        console.log("登録されたid:", registerId);
     },[registerId]);
 
     const handleChange = (inputRef, setError) => {
@@ -125,6 +126,7 @@ export const CreateRoom = () => {
         <>
             <StyledEngineProvider injectFirst>
                 <CssBaseline />
+                <Header />
                 <div className={CRModule.around_page}>
                     <Box className={CRModule.box}>
                         <p className={CRModule.title}>部屋を作成</p>
