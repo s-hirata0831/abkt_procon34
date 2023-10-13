@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap');
 
+ul{
+    width:80%;
+    background-color:white;
+    border-radius:8px;
+    box-shadow:0 0 5px silver;
+    margin:0 10% 5% 10%;
+}
+
+ul li{
+    line-height:1.5;
+    margin:1vh 0.75vw 2vh 0.75vw;
+    margin-bottom: 3px;
+    list-style-type:none!important;
+}
+
+ul li p{
+    transform:translate(0,-375%);   
+    font-size:0.75em;   
+}
 
 .text{
     text-align:center;
@@ -10,14 +29,12 @@
 
 .spell{
     text-align:center;
-    font-size:2em;
     font-family: 'Kiwi Maru' , serif;
 }
 
 .un_ordered{
     display:flex;
-    flex-direction:column;
     list-style:none;
     font-size:3rem;
-    gap: 15vh 0;
+    flex-wrap:wrap;
 }

@@ -8,7 +8,6 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
 
 
 function createData(name,rank,score) {
@@ -56,16 +55,35 @@ export const Result_module = () => {
                 </Table>
                 </TableContainer>
                 </div>
-                <div style={{margin:"5% 0 0 0"}}>
+                <div style={{margin:"5% 0 0 0"}} >
                     <p className={styles.text}>～今回考案された呪文達～</p>
                 </div>
                 <div className={styles.spell}>
                     <ul className={styles.un_ordered}>
-                        <li>トマト</li>
-                        <li>ラーメン</li>
-                        <li>サンドイッチ</li>
-                        <li>チャーハン</li>
-                        <li>大根おろし</li>
+                        <li>
+                            <img src="../../img/result_card.png"/>
+                            <p>トマト</p>
+                        </li>
+                        <li>
+                            <img src="../../img/result_card.png"/>
+                            <p>ラーメン</p>
+                        </li>
+                        <li>
+                            <img src="../../img/result_card.png"/>
+                            <p>サンドイッチ</p>
+                        </li>
+                        <li>
+                            <img src="../../img/result_card.png"/>
+                            <p>チャーハン</p>
+                        </li>
+                        <li>
+                            <img src="../../img/result_card.png"/>
+                            <p>ステーキ</p>
+                        </li>
+                        <li>
+                            <img src="../../img/result_card.png"/>
+                            <p>バナナ</p>
+                        </li>
                     </ul>
                 </div>
             </StyledEngineProvider>
