@@ -14,6 +14,7 @@ import { Login } from "./components/pages/Login";
 import { ReadyFirst } from "./components/pages/ReadyFirst";
 import { Whatabkt_explain } from "./components/modules/Whatabkt_explain";
 import { Whatabkt } from "./components/pages/Whatabkt";
+import { SecondPhase } from "./components/pages/SecondPhase";
 
 export const App = () => {
 return (
@@ -31,6 +32,7 @@ return (
         <Route path="/Room/:roomId" element={<Room />} />
         <Route path="/Room/:roomId/ReadyFirst" element={<ReadyFirst />} />
         <Route path="/Room/:roomId/FirstPhase" element={<FirstPhase />} />
+        <Route path="/Room/:roomId/SecondPhase" element={<SecondPhase />} />
         <Route path="*" element={<NotFound/>} />
       </Routes>
     </BrowserRouter>
