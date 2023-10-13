@@ -11,7 +11,7 @@ import Modal from "@mui/material/Modal";
 import Stack from "@mui/material/Stack";
 import TextField from '@mui/material/TextField';
 import db from "../../firebase.config";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, doc, setDoc, updateDoc } from "firebase/firestore";
 import { auth } from "../../firebase.config.js";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 

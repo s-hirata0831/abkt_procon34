@@ -5,7 +5,8 @@ import {
     onAuthStateChanged
 } from "firebase/auth";
 import { auth } from "../../firebase.config";
-
+import db from "../../firebase.config";
+import { collection, addDoc ,setDoc, doc, Timestamp } from "firebase/firestore";
 import LModule from "../../styles/Login.module.css";
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from "../modules/HeaderGuest";
@@ -23,14 +24,22 @@ export const Login = () => {
     //Login
     const [loginId, setLoginId] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
+    const [displayName, setDisplayName] = useState("");
 
     const handleSubmit = async () => {
         try {
+            //Auth
             await signInWithEmailAndPassword(
                 auth,
                 loginId + '@example.com',
                 loginPassword
             );
+
+            //FireStoreに登録
+            const playerPath = collection(db, "rooms", loginId, "player");
+            addDoc(playerPath, {
+                displayName: displayName
+            });
 
         } catch (error) {
             alert("IDまたはパスワードが間違っています。");
@@ -41,17 +50,19 @@ export const Login = () => {
     const [user, setUser] = useState();
 
     useEffect(() => {
-        onAuthStateChanged(auth, (currentUser) => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
         });
-    });
+
+        return () => unsubscribe();//クリーンアップ
+    }, []);
 
     return (
         <>
             <Header />
             {/*ログインしている場合に，待機場所へ飛ぶ設定*/}
             {user ? (
-                <Navigate to={`/room/abkt/FirstPhase`} />
+                <Navigate to={`/room/${loginId}/ReadyFirst`} />
             ) : (
                 <StyledEngineProvider injectFirst>
                     <CssBaseline />
@@ -85,9 +96,8 @@ export const Login = () => {
                             margin="normal"
                             label="自分の参加表示名"
                             variant="standard"
-                            type="password"
-                            value={loginPassword}
-                            onChange={(e) => setLoginPassword(e.target.value)}
+                            value={displayName}
+                            onChange={(e) => setDisplayName(e.target.value)}
                         />
                         <Stack spacing={2} my={2} direction="row" justifyContent="end" className={LModule.button_around}>
                             <Button variant="outlined" style={{ color: "#7882b0" }} className={LModule.button_icon} onClick={backToHome}>Homeへ戻る</Button>
