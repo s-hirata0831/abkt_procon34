@@ -29,6 +29,13 @@ export const Home = () => {
                             </Button>
                         </Link>
                     </div>
+                    <div className={styles.detail}>
+                        <Link to={`/Whatabkt`}>
+                            <Button variant="contained" size="large" className={styles.buttons} style={{backgroundColor: "#7882b0"}}>
+                                What's アブラカタブレイン
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
 
             </StyledEngineProvider>

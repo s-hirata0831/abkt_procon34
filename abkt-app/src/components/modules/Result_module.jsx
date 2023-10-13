@@ -16,11 +16,11 @@ function createData(name,rank,score) {
 }
 
 const rows = [
-    createData('さブロー', '3' , '334'),
-    createData('分太郎', '4' , '224'),
-    createData('太郎', '1' , '114514'),
-    createData('分シロー', '5' , '53'),
-    createData('シロー', '2' , '1919'),
+    createData('さブロー', '3' , '420'),
+    createData('分太郎', '4' , '320'),
+    createData('太郎', '1' , '1200'),
+    createData('分シロー', '5' , '40'),
+    createData('シロー', '2' , '650'),
   ];
 
 export const Result_module = () => {
@@ -61,11 +61,11 @@ export const Result_module = () => {
                 </div>
                 <div className={styles.spell}>
                     <ul className={styles.un_ordered}>
-                        <li>野生</li>
-                        <li>咆哮</li>
-                        <li>関係ないやろ！</li>
-                        <li>これもすべて...</li>
-                        <li>宝生永夢ゥ！</li>
+                        <li>トマト</li>
+                        <li>ラーメン</li>
+                        <li>サンドイッチ</li>
+                        <li>チャーハン</li>
+                        <li>大根おろし</li>
                     </ul>
                 </div>
             </StyledEngineProvider>

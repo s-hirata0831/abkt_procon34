@@ -33,7 +33,7 @@ return (
         <Route path="/Room/:roomId/FirstPhase" element={<FirstPhase />} />
         <Route path="*" element={<NotFound/>} />
         <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
-        <Route path="/Whatabkt" element={<Whatabkt/>} />
+        <Route path="/Whatabkt/" element={<Whatabkt/>} />
         <Route path="/Result_module" elenemt={<Result_module/>} />
         <Route path="/Result" element={<Result/>} />
       </Routes>

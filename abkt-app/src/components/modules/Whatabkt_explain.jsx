@@ -15,7 +15,9 @@ export const Whatabkt_explain = () => {
                 <p>呪文(アイデア)を共有し、評価しあうことで呪文(アイデア)は洗練されたものとなる。</p>
                 <p>一番評価の良い呪文(アイデア)は魔術書の1節として追加される。</p>
             </div>
+            <div>
                 <img src='./img/abkt_explain.png' alt="実験" className={styles.img_story} />
+            </div>
         </div>
         <div className={styles.flex}>
             <div>
