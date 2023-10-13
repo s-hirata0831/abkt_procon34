@@ -5,7 +5,7 @@ import {
     onAuthStateChanged
 } from "firebase/auth";
 import { auth } from "../../firebase.config";
-import { functions } from "../../firebase.config";
+
 import LModule from "../../styles/Login.module.css";
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from "../modules/HeaderGuest";
@@ -32,9 +32,6 @@ export const Login = () => {
                 loginPassword
             );
 
-            //FirebaseFunctionsを呼び出す
-            const identifyUserFunction = functions.httpsCallable('identifyUser');
-            await identifyUserFunction();
         } catch (error) {
             alert("IDまたはパスワードが間違っています。");
         }

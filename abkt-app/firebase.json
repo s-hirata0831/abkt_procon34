@@ -15,7 +15,8 @@
   },
   "functions": [
     {
-      "source": "functions",
+      "runtime": "nodejs16",
+      "source": ".",
       "codebase": "default",
       "ignore": [
         "node_modules",
@@ -24,8 +25,12 @@
         "firebase-debug.*.log"
       ],
       "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint"
+        "npm --prefix \"$RESOURCE_DIR\" run build"
       ]
     }
-  ]
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
 }
