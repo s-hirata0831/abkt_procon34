@@ -9,7 +9,8 @@ import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import CssBaseline from '@mui/material/CssBaseline';
-import { useStopwatch } from "react-timer-hook";
+import { useStopwatch, Navigate } from "react-timer-hook";
+import { useNavigate } from 'react-router-dom';
 
 function Timer({ expiryTimestamp }) {
     const {
@@ -32,6 +33,11 @@ function Timer({ expiryTimestamp }) {
 export const FirstSide = () => {
     const time = new Date();
     time.setSeconds(time.getSeconds());
+
+    const navigate = useNavigate();
+    const goOnSecond = () => {
+        navigate("/room/")
+    }
 
     return (
         <>
@@ -56,7 +62,7 @@ export const FirstSide = () => {
                                 </div>
                             </div>
                             <div className={FSModule.button_area}>
-                                <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
+                                <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button} onClick={goOnSecond}>
                                     すべて唱えた！
                                 </Button>
                                 <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
