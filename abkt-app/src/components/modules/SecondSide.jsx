@@ -3,11 +3,12 @@ import FSModule from "../../styles/FirstSide.module.css";
 import { useNavigate, Navigate } from 'react-router-dom';
 import {
     signInWithEmailAndPassword,
-    onAuthStateChanged
+    onAuthStateChanged,
+    getAuth
 } from "firebase/auth";
 import { auth } from "../../firebase.config";
 import db from "../../firebase.config";
-import { collection, addDoc ,setDoc, doc, Timestamp } from "firebase/firestore";
+import { collection, addDoc, setDoc, doc, Timestamp } from "firebase/firestore";
 import { StyledEngineProvider } from "@mui/material";
 import Button from "@mui/material/Button";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
@@ -61,6 +62,13 @@ export const SecondSide = () => {
             unsubscribe();
         };
     }, []);
+
+    //アイデアテーマ取得
+    const [ideaTheme, setIdeaTheme] = useState([]);
+    useEffect(() => {
+        const ideaThemeCollectionsRef = collection(db, "rooms", id ,"ideaTheme");
+        console.log(ideaThemeCollectionsRef);
+    },[]);
 
     return (
         <>
