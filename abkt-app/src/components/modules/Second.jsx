@@ -7,6 +7,9 @@ import Card from '@mui/material/Card';
 import CssBaseline from '@mui/material/CssBaseline';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import TextField from '@mui/material/TextField';
+import db from "../../firebase.config";
+import { addDoc, collection, doc, setDoc, updateDoc } from "firebase/firestore";
+import { auth } from "../../firebase.config.js";
 
 export const Second = () => {
     const [ideaText, setIdeaText] = useState("");
@@ -26,9 +29,16 @@ export const Second = () => {
         setIdea(newIdea);
     }
 
+    const [jumon, setJumon] = useState("");
+    const inJumon = async () => {
+        const jumonCollection = collection(db, "jumons");
+        const jumonData = await addDoc(jumonCollection, {
+            jumon : jumon
+        });
+    }
     return (
         <>
-            <StyledEngineProvider injectFirst>
+            <StyledEngineProvider injectFijumonrst>
                 <CssBaseline />
                 <Card position="static" style={{ backgroundColor: "#FDF5DE" }} className={styles.whole}>
                     {/*TitleArea*/}
@@ -43,7 +53,7 @@ export const Second = () => {
                             <TextField label={'アイデアを入力'} variant="filled" value={ideaText} onChange={onChangeText} />
                         </div>
                         <div className={styles.input_button}>
-                            <Button variant="contained" startIcon={<AddCommentIcon />} style={{ backgroundColor: "#7882b0" }} size="large" onClick={onClickAdd}>
+                            <Button variant="contained" startIcon={<AddCommentIcon />} style={{ backgroundColor: "#7882b0" }} size="large" onClick={onClickAdd, inJumon}>
                                 追加
                             </Button>
                         </div>
@@ -51,6 +61,17 @@ export const Second = () => {
 
                     {/*Shuffled list*/}
                     <p className={styles.title}>シャッフルされたアイデア</p>
+                    <ul>
+                        <li>
+                            栗ご飯
+                        </li>
+                        <li>
+                            まつたけ
+                        </li>
+                        <li>
+                            読書とつなげる
+                        </li>
+                    </ul>
 
                     {/*IdeaList*/}
                     <div className={styles.idea_area}>

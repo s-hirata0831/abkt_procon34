@@ -27,6 +27,7 @@ return (
         <Route path="/Login" element={<Login />} />
         <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
         <Route path="/Whatabkt" element={<Whatabkt/>} />
+        <Route path="/SecondPhase" element={<SecondPhase />} />
 
         <Route path="/CreateRoom" element={<CreateRoom />} />
         <Route path="/Room/:roomId" element={<Room />} />

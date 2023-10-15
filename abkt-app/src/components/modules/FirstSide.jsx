@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import FSModule from "../../styles/FirstSide.module.css";
 import { StyledEngineProvider } from "@mui/material";
+import { getAuth } from "firebase/auth";
+import {onAuthStateChanged} from "firebase/auth";
 import Button from "@mui/material/Button";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Card from '@mui/material/Card';
@@ -32,6 +35,26 @@ function Timer({ expiryTimestamp }) {
 export const FirstSide = () => {
     const time = new Date();
     time.setSeconds(time.getSeconds());
+        //ログイン状態
+        const [id, setId] = useState("None");
+        const [loggedInUsersCount, setLoggedInUsersCount] = useState(0);
+    
+        useEffect(() => {
+            const auth = getAuth();
+            const user = auth.currentUser;
+            const unsubscribe = onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    const userEmail = user.email;
+                    const cleanedId = userEmail.replace("@example.com", "");
+                    setId(cleanedId);
+                } else {
+                    setId("None");
+                }
+            });
+            return () => {
+                unsubscribe();
+            };
+        }, []);
 
     return (
         <>
@@ -57,7 +80,7 @@ export const FirstSide = () => {
                             </div>
                             <div className={FSModule.button_area}>
                                 <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
-                                    すべて唱えた！
+                                   <Link to={`/SecondPhase`}>すべて唱えた！</Link> 
                                 </Button>
                                 <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
                                     助けて！！！
