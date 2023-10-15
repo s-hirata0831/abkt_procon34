@@ -7,7 +7,7 @@ import {onAuthStateChanged} from "firebase/auth";
 import Button from "@mui/material/Button";
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Card from '@mui/material/Card';
-//import CardContent from '@mui/material/CardContent';
+import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
@@ -34,6 +34,22 @@ function Timer({ expiryTimestamp }) {
 }
 
 export const FirstSide = () => {
+    const [ideaText, setIdeaText] = useState("");
+    const [idea, setIdea] = useState([]);
+    const onChangeText = (event) => setIdeaText(event.target.value);
+
+    const onClickAdd = () =>{
+        if (ideaText === "") return;
+        const newIdea = [...idea, ideaText];
+        setIdea(newIdea);
+        setIdeaText("");
+    };
+
+    const onClickDelete = (index) => {
+        const newIdea = [...idea];
+        newIdea.splice(index, 1);
+        setIdea(newIdea);
+    }
     const time = new Date();
     time.setSeconds(time.getSeconds());
         //ログイン状態

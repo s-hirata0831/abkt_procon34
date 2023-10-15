@@ -53,7 +53,7 @@ export const Second = () => {
                             <TextField label={'アイデアを入力'} variant="filled" value={ideaText} onChange={onChangeText} />
                         </div>
                         <div className={styles.input_button}>
-                            <Button variant="contained" startIcon={<AddCommentIcon />} style={{ backgroundColor: "#7882b0" }} size="large" onClick={onClickAdd, inJumon}>
+                            <Button variant="contained" startIcon={<AddCommentIcon />} style={{ backgroundColor: "#7882b0" }} size="large" onClick={onClickAdd}>
                                 追加
                             </Button>
                         </div>
