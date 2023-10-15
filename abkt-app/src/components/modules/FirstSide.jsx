@@ -12,7 +12,8 @@ import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 import CssBaseline from '@mui/material/CssBaseline';
-import { useStopwatch } from "react-timer-hook";
+import { useStopwatch, Navigate } from "react-timer-hook";
+import { useNavigate } from 'react-router-dom';
 
 function Timer({ expiryTimestamp }) {
     const {
@@ -55,6 +56,11 @@ export const FirstSide = () => {
                 unsubscribe();
             };
         }, []);
+
+    const navigate = useNavigate();
+    const goOnSecond = () => {
+        navigate("/room/")
+    }
 
     return (
         <>
