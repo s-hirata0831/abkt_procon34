@@ -8,6 +8,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import TextField from '@mui/material/TextField';
 import db from "../../firebase.config";
+import { Link } from "react-router-dom";
 import { addDoc, collection, doc, setDoc, updateDoc } from "firebase/firestore";
 import { auth } from "../../firebase.config.js";
 

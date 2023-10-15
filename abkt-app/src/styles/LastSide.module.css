@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap");
+
+.button_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon_around {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.magic_button {
+  margin-bottom: 1rem !important;
+}
+
+.side_bar {
+  margin: 5%;
+  margin-right: 10vi;
+  width: 10vi;
+  max-width: 30vi;
+}
+
+.theme {
+  padding-left: 1rem;
+}
+
+.themename {
+  font-family: "Kiwi Maru", serif;
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: "DotGothic16", sans-serif;
+}
+
+.member {
+  padding-left: 1rem;
+  font-family: "Kiwi Maru", serif;
+}
+
+.idea {
+  background-color: #fffdfb;
+  border-radius: 3px 3px 3px 3px;
+  margin: 5%;
+  padding: 2%;
+  /*内側余白*/
+  border: solid 2px #333;
+  /*線の種類・太さ・色*/
+}
+
+.idealist {
+  margin: 5%, 0;
+  height: 40em;
+  border: solid 1px #333;
+  border-radius: 5px 5px 5px 5px;
+  padding: 5% 0;
+  text-align: center;
+  overflow: auto;
+  scrollbar-width: none;
+}

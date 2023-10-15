@@ -15,6 +15,7 @@ import { ReadyFirst } from "./components/pages/ReadyFirst";
 import { Whatabkt_explain } from "./components/modules/Whatabkt_explain";
 import { Whatabkt } from "./components/pages/Whatabkt";
 import { SecondPhase } from "./components/pages/SecondPhase";
+import { LastPhase } from "./components/pages/LastPhase";
 
 export const App = () => {
 return (
@@ -28,6 +29,7 @@ return (
         <Route path="/Whatabkt_explain" element={<Whatabkt_explain/>} />
         <Route path="/Whatabkt" element={<Whatabkt/>} />
         <Route path="/SecondPhase" element={<SecondPhase />} />
+        <Route path="/LastPhase" element={<LastPhase />} />
 
         <Route path="/CreateRoom" element={<CreateRoom />} />
         <Route path="/Room/:roomId" element={<Room />} />

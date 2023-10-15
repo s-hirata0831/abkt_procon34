@@ -6,6 +6,7 @@ import {
     onAuthStateChanged,
     getAuth
 } from "firebase/auth";
+import { Link } from "react-router-dom";
 import { auth } from "../../firebase.config";
 import db from "../../firebase.config";
 import { collection, addDoc, setDoc, doc, Timestamp } from "firebase/firestore";
@@ -94,7 +95,7 @@ export const SecondSide = () => {
                             </div>
                             <div className={FSModule.button_area}>
                                 <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
-                                    すべて唱えた！
+                                    <Link to={`/LastPhase`}>すべて唱えた</Link>
                                 </Button>
                                 <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
                                     助けて！！！
