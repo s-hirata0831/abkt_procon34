@@ -21,7 +21,7 @@ export const LastSide = () => {
               <Divider />
               <div className={ESModule.idealist}>
                 <div className={ESModule.idea}>
-                  肉丸うどんの鎌田マヨネーズ，マヨネーズ好きにはたまらない一品です。
+                  肉丸うどん,たまらない一品です。
                 </div>
                 <div className={ESModule.idea}>栗</div>
                 <div className={ESModule.idea}>イモ</div>
