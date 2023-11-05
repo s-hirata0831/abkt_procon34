@@ -86,7 +86,7 @@ export const FirstSide = () => {
                     <Card position="static" style={{ backgroundColor: "#FDF5DE" }}>
                         <List component="nav">
                             <div className={FSModule.icon_around}>
-                                <img src={`${process.env.PUBLIC_URL}/img/brainFirst.png`} className="{FSModule.icon_around}" />
+                                <img src={`/img/brainFirst.png`} className="{FSModule.icon_around}" />
                             </div>
                             <Divider />
                             <div className={FSModule.theme}>
@@ -101,9 +101,9 @@ export const FirstSide = () => {
                                 </div>
                             </div>
                             <div className={FSModule.button_area}>
-                                <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
-                                   <Link to={`/SecondPhase`}>すべて唱えた！</Link> 
-                                </Button>
+                                <Link to={`/SecondPhase`} className={FSModule.buttonPoint}>
+                                <Button variant="contained" endIcon={<AutoFixHighIcon />} style={{ backgroundColor: "#7882b0", color:"white" }} size="small" className={FSModule.magic_button}>すべて唱えた！</Button>
+                                </Link>
                                 <Button variant="contained" endIcon={<PsychologyAltIcon />} style={{ backgroundColor: "#7882b0" }} size="small" className={FSModule.magic_button}>
                                     助けて！！！
                                 </Button>
